@@ -10,6 +10,14 @@ const handleI18nRouting = createMiddleware({
   defaultLocale: DEFAULT_LOCALE,
 });
 
+function NextIntlMiddleware(middleware: NextMiddleware): NextMiddleware {
+  return async (request: NextRequest, event: NextFetchEvent) => {
+    const response = handleI18nRouting(request);
+    if (response) return response;
+    return middleware(request, event);
+  };
+}
+
 export default createMiddlewareChain([NextIntlMiddleware]);
 
 export const config = {
@@ -24,11 +32,3 @@ export const config = {
     "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
   ],
 };
-
-function NextIntlMiddleware(middleware: NextMiddleware): NextMiddleware {
-  return async (request: NextRequest, event: NextFetchEvent) => {
-    const response = handleI18nRouting(request);
-    if (response) return response;
-    return middleware(request, event);
-  };
-}
