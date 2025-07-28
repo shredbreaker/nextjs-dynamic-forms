@@ -1,0 +1,246 @@
+{
+  "domain_editor": {
+    "save_and_continue": "Save & Continue",
+    "preview": "Preview",
+    "developer_panel": "Developer panel",
+    "preview-toggle": "Preview",
+    "code-toggle": "Code (for website developer)",
+    "settings-toggle": "Advanced settings",
+    "tree-toggle": "Show compact list",
+    "translations-toggle": "Translations",
+    "rearrange-toggle": "Rearrange",
+    "debug-toggle": "JSON Preview",
+    "cancel": "Cancel",
+    "save": "Save",
+    "offline": "Offline",
+    "publish": "Publish",
+    "published": "Published",
+    "add-property": "Add Property",
+    "unpublish": "Unpublish",
+    "saving": "Saving...",
+    "domain": {
+      "back_to_list": "Back to List",
+      "edit": "Edit",
+      "edit_title": "Edit Domain",
+      "edit_description": "Configure your domain settings",
+      "name": "Domain Name",
+      "name_placeholder": "Enter domain name",
+      "unnamed": "Unnamed Domain",
+      "code": "Domain Code",
+      "code_placeholder": "Enter domain code",
+      "description": "Description",
+      "description_placeholder": "Enter domain description",
+      "active": "Active",
+      "active_yes": "Active",
+      "active_no": "Inactive",
+      "locked": "Locked",
+      "locked_no": "Unlocked",
+      "system_description": "System Description",
+      "system_description_placeholder": "Enter system description",
+      "status": {
+        "ready": "Ready",
+        "published": "Published"
+      },
+      "publish": {
+        "title": "Publish Domain",
+        "description": "Make this domain available to users"
+      },
+      "unpublish": {
+        "title": "Unpublish Domain",
+        "description": "Make this domain unavailable to users"
+      }
+    },
+    "property": {
+      "name": {
+        "label": "Field name",
+        "placeholder": "Enter field name"
+      },
+      "description": {
+        "label": "Short description",
+        "placeholder": "Enter short description"
+      },
+      "code": {
+        "label": "Code",
+        "placeholder": "Enter code"
+      },
+      "is-private": {
+        "tooltip": {
+          "on": "Private field only visible to you",
+          "off": "Public field visible to all users"
+        }
+      },
+      "is-locked": {
+        "tooltip": {
+          "on": "Field is locked and can't be deleted or some fields can't be edited",
+          "off": "Field is unlocked"
+        }
+      },
+      "is-required": {
+        "tooltip": {
+          "on": "This field is required",
+          "off": "This field is not required"
+        }
+      },
+      "number": {
+        "min-label": "Min",
+        "max-label": "Max",
+        "tooltip": {
+          "min": "Set minimum value",
+          "max": "Set maximum value",
+          "integer": "Use whole numbers only (123)",
+          "decimal": "Use decimal numbers (123.00)"
+        }
+      },
+      "text": {
+        "max-label": "Max length",
+        "single-line": "Single line text field",
+        "multiline": "Multiline text area"
+      },
+      "option": {
+        "name": "Option name",
+        "single-selection": "Single selection",
+        "multi-selection": "Multi selection",
+        "manual-sorting": "Manual sorting",
+        "alphabetical-sorting": "Alphabetical sorting"
+      },
+      "meta": {
+        "number": {
+          "min": {
+            "label": "Min",
+            "tooltip": "Set option minimum value"
+          },
+          "max": {
+            "label": "Max",
+            "tooltip": "Set option maximum value"
+          },
+          "min-label": "Min",
+          "max-label": "Max",
+          "tooltip": {
+            "min": "Set minimum value",
+            "max": "Set maximum value",
+            "integer": "Use whole numbers only (123)",
+            "decimal": "Use decimal numbers (123.00)"
+          },
+          "is-integer": {
+            "on": {
+              "label": "Whole numbers",
+              "tooltip": "Use whole numbers only (123)"
+            },
+            "off": {
+              "label": "Decimal numbers",
+              "tooltip": "Use decimal numbers (123.00)"
+            }
+          }
+        },
+        "text": {
+          "max": {
+            "label": "Max length",
+            "tooltip": "Set option maximum length"
+          },
+          "max-label": "Max length",
+          "single-line": "Single line text field",
+          "multiline": "Multiline text area",
+          "multiline": {
+            "on": {
+              "label": "Multiline text area",
+              "tooltip": "Multiline text area"
+            },
+            "off": {
+              "label": "Single line text field",
+              "tooltip": "Single line text field"
+            }
+          }
+        },
+        "option": {
+          "name": {
+            "label": "Option name",
+            "tooltip": "Set option name"
+          },
+          "multi": {
+            "on": {
+              "label": "Multi selection",
+              "tooltip": "Multi selection"
+            },
+            "off": {
+              "label": "Single selection",
+              "tooltip": "Single selection"
+            }
+          },
+          "single-selection": "Single selection",
+          "multi-selection": "Multi selection",
+          "manual-sorting": "Manual sorting",
+          "alphabetical-sorting": "Alphabetical sorting",
+          "sorting": {
+            "manual": {
+              "label": "Manual",
+              "tooltip": "Manual sorting"
+            },
+            "alphabet": {
+              "label": "Alphabetical",
+              "tooltip": "Alphabetical sorting"
+            }
+          }
+        }
+      },
+      "property_type": {
+        "text": "Text",
+        "text_description": "Single or Multi-line text",
+        "number": "Number",
+        "number_description": "Numeric input",
+        "bool": "Toggle",
+        "bool_description": "Yes or No",
+        "option": "Options",
+        "option_description": "Select from a list of options or tags",
+        "size": "Size",
+        "size_description": "Area size (rai, sqm, etc.)"
+      }
+    },
+    "UI": {
+      "Tooltips": {
+        "SelectLanguage": "Select language",
+        "Theme": {
+          "Light": "Light Mode",
+          "Dark": "Dark Mode",
+          "System": "System Mode"
+        }
+      }
+    },
+    "property_options": {
+      "manage_dialog": {
+        "title": "Manage Property Options",
+        "description": "Add, edit, or remove options for this property.",
+        "add_new_section": "Add New Option",
+        "existing_section": "Existing Options",
+        "new_option_placeholder": "Enter new option",
+        "option_name_placeholder": "Option name",
+        "delete_confirmation": {
+          "title": "Delete option",
+          "description": "Are you sure you want to delete this option?"
+        }
+      }
+    },
+    "domain_forms": {
+      "create_title": "Create Domain",
+      "edit_title": "Edit Schema",
+      "name_label": "Name:",
+      "display_order": "Display Order",
+      "active": "Active",
+      "locked": "Locked",
+      "create_button": "Create Domain",
+      "update_button": "Update Domain",
+      "updating": "Updating...",
+      "error": "Error"
+    },
+    "common": {
+      "delete": "Delete",
+      "clone": "Clone",
+      "reset": "Reset"
+    },
+    "canvas": {
+      "reset": {
+        "title": "Reset form",
+        "description": "Are you sure you want to reset the form? This will reset all properties to the original state."
+      }
+    }
+  }
+}

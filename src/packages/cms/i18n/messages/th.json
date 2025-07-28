@@ -1,0 +1,246 @@
+{
+  "domain_editor": {
+    "save_and_continue": "บันทึกและดำเนินการต่อ",
+    "preview": "ดูตัวอย่าง",
+    "developer_panel": "พื้นที่พัฒนาระบบ",
+    "preview-toggle": "ดูตัวอย่าง",
+    "code-toggle": "รหัส (สำหรับนักพัฒนาระบบ)",
+    "settings-toggle": "ตั้งค่าเพิ่มเติม",
+    "tree-toggle": "แสดงรายการสั้น",
+    "translations-toggle": "การแปลภาษา",
+    "rearrange-toggle": "จัดเรียง",
+    "debug-toggle": "ดูข้อมูล JSON",
+    "cancel": "ยกเลิก",
+    "save": "บันทึก",
+    "offline": "ออฟไลน์",
+    "publish": "เผยแพร่",
+    "published": "เผยแพร่แล้ว",
+    "add-property": "เพิ่มฟิลด์",
+    "unpublish": "ยกเลิกการเผยแพร่",
+    "saving": "กำลังบันทึก...",
+    "domain": {
+      "back_to_list": "กลับไปยังรายการ",
+      "edit": "แก้ไข",
+      "edit_title": "แก้ไขโดเมน",
+      "edit_description": "กำหนดค่าการตั้งค่าโดเมนของคุณ",
+      "name": "ชื่อโดเมน",
+      "name_placeholder": "กรอกชื่อโดเมน",
+      "unnamed": "โดเมนไม่มีชื่อ",
+      "code": "รหัสโดเมน",
+      "code_placeholder": "กรอกรหัสโดเมน",
+      "description": "คำอธิบาย",
+      "description_placeholder": "กรอกคำอธิบายโดเมน",
+      "active": "ใช้งาน",
+      "active_yes": "ใช้งาน",
+      "active_no": "ไม่ใช้งาน",
+      "locked": "ล็อก",
+      "locked_no": "ไม่ล็อก",
+      "system_description": "คำอธิบายระบบ",
+      "system_description_placeholder": "กรอกคำอธิบายระบบ",
+      "status": {
+        "ready": "พร้อมใช้งาน",
+        "published": "เผยแพร่แล้ว"
+      },
+      "publish": {
+        "title": "เผยแพร่โดเมน",
+        "description": "ทำให้โดเมนนี้พร้อมใช้งานสำหรับผู้ใช้"
+      },
+      "unpublish": {
+        "title": "ยกเลิกการเผยแพร่โดเมน",
+        "description": "ทำให้โดเมนนี้ไม่พร้อมใช้งานสำหรับผู้ใช้"
+      }
+    },
+    "property": {
+      "name": {
+        "label": "ชื่อฟิลด์",
+        "placeholder": "กรอกชื่อฟิลด์"
+      },
+      "description": {
+        "label": "คำอธิบายสั้น",
+        "placeholder": "กรอกคำอธิบายสั้น"
+      },
+      "code": {
+        "label": "รหัส",
+        "placeholder": "กรอกรหัส"
+      },
+      "is-private": {
+        "tooltip": {
+          "on": "ฟิลด์ส่วนตัวจะสามารถเข้าถึงได้โดยคุณเท่านั้น",
+          "off": "ฟิลด์สาธารณะจะสามารถเข้าถึงได้โดยทุกคน"
+        }
+      },
+      "is-locked": {
+        "tooltip": {
+          "on": "ฟิลด์ถูกล็อกและบางการตั้งค่าไม่สามารถแก้ไขได้",
+          "off": "ฟิลด์ไม่ถูกล็อกและทุกการตั้งค่าสามารถแก้ไขได้"
+        }
+      },
+      "is-required": {
+        "tooltip": {
+          "on": "ฟิลด์นี้ต้องกรอก",
+          "off": "ฟิลด์นี้ไม่ต้องกรอก"
+        }
+      },
+      "number": {
+        "min-label": "ค่าต่ำสุด",
+        "max-label": "ค่าสูงสุด",
+        "tooltip": {
+          "min": "ตั้งค่าค่าต่ำสุด",
+          "max": "ตั้งค่าค่าสูงสุด",
+          "integer": "ใช้จำนวนเต็มเท่านั้น (123)",
+          "decimal": "ใช้จำนวนทศนิยม (123.00)"
+        }
+      },
+      "text": {
+        "max-label": "ความยาวสูงสุด",
+        "single-line": "ข้อความหนึ่งบรรทัด",
+        "multiline": "ข้อความหลายบรรทัด"
+      },
+      "option": {
+        "name": "ชื่อตัวเลือก",
+        "single-selection": "ตัวเลือกหนึ่งตัว",
+        "multi-selection": "ตัวเลือกหลายตัว",
+        "manual-sorting": "จัดเรียงด้วยตนเอง",
+        "alphabetical-sorting": "จัดเรียงตามตัวอักษร"
+      },
+      "meta": {
+        "number": {
+          "min": {
+            "label": "ค่าต่ำสุด",
+            "tooltip": "ตั้งค่าค่าต่ำสุด"
+          },
+          "max": {
+            "label": "ค่าสูงสุด",
+            "tooltip": "ตั้งค่าค่าสูงสุด"
+          },
+          "min-label": "ค่าต่ำสุด",
+          "max-label": "ค่าสูงสุด",
+          "tooltip": {
+            "min": "ตั้งค่าค่าต่ำสุด",
+            "max": "ตั้งค่าค่าสูงสุด",
+            "integer": "ใช้จำนวนเต็มเท่านั้น (123)",
+            "decimal": "ใช้จำนวนทศนิยม (123.00)"
+          },
+          "is-integer": {
+            "on": {
+              "label": "จำนวนเต็ม",
+              "tooltip": "ใช้จำนวนเต็มเท่านั้น (123)"
+            },
+            "off": {
+              "label": "จำนวนทศนิยม",
+              "tooltip": "ใช้จำนวนทศนิยม (123.00)"
+            }
+          }
+        },
+        "text": {
+          "max": {
+            "label": "ความยาวสูงสุด",
+            "tooltip": "ตั้งค่าความยาวสูงสุด"
+          },
+          "max-label": "ความยาวสูงสุด",
+          "single-line": "ข้อความหนึ่งบรรทัด",
+          "multiline": "ข้อความหลายบรรทัด",
+          "multiline": {
+            "on": {
+              "label": "ข้อความหลายบรรทัด",
+              "tooltip": "ข้อความหลายบรรทัด"
+            },
+            "off": {
+              "label": "ข้อความหนึ่งบรรทัด",
+              "tooltip": "ข้อความหนึ่งบรรทัด"
+            }
+          }
+        },
+        "option": {
+          "name": {
+            "label": "ชื่อตัวเลือก",
+            "tooltip": "ตั้งค่าชื่อตัวเลือก"
+          },
+          "multi": {
+            "on": {
+              "label": "ตัวเลือกหลายตัว",
+              "tooltip": "ตัวเลือกหลายตัว"
+            },
+            "off": {
+              "label": "ตัวเลือกหนึ่งตัว",
+              "tooltip": "ตัวเลือกหนึ่งตัว"
+            }
+          },
+          "single-selection": "ตัวเลือกหนึ่งตัว",
+          "multi-selection": "ตัวเลือกหลายตัว",
+          "manual-sorting": "จัดเรียงด้วยตนเอง",
+          "alphabetical-sorting": "จัดเรียงตามตัวอักษร",
+          "sorting": {
+            "manual": {
+              "label": "จัดเรียงด้วยตนเอง",
+              "tooltip": "จัดเรียงด้วยตนเอง"
+            },
+            "alphabet": {
+              "label": "จัดเรียงตามตัวอักษร",
+              "tooltip": "จัดเรียงตามตัวอักษร"
+            }
+          }
+        }
+      },
+      "property_type": {
+        "text": "ข้อความ",
+        "text_description": "ข้อความหนึ่งหรือหลายบรรทัด",
+        "number": "ตัวเลข",
+        "number_description": "ตัวเลข",
+        "bool": "ปุ่มสลับ",
+        "bool_description": "ใช่หรือไม่",
+        "option": "ตัวเลือก",
+        "option_description": "เลือกจากรายการตัวเลือกหรือแท็ก",
+        "size": "ขนาด",
+        "size_description": "ขนาด (ตารางกิโลเมตร, ตารางวา, ฯลฯ)"
+      }
+    },
+    "UI": {
+      "Tooltips": {
+        "SelectLanguage": "เลือกภาษา",
+        "Theme": {
+          "Light": "โหมดกลาง",
+          "Dark": "โหมดมืด",
+          "System": "โหมดระบบ"
+        }
+      }
+    },
+    "property_options": {
+      "manage_dialog": {
+        "title": "จัดการตัวเลือกคุณสมบัติ",
+        "description": "เพิ่ม แก้ไข หรือลบตัวเลือกสำหรับคุณสมบัตินี้",
+        "add_new_section": "เพิ่มตัวเลือกใหม่",
+        "existing_section": "ตัวเลือกที่มีอยู่",
+        "new_option_placeholder": "กรอกตัวเลือกใหม่",
+        "option_name_placeholder": "ชื่อตัวเลือก",
+        "delete_confirmation": {
+          "title": "ลบตัวเลือก",
+          "description": "คุณแน่ใจหรือไม่ที่จะลบตัวเลือกนี้?"
+        }
+      }
+    },
+    "domain_forms": {
+      "create_title": "สร้างโดเมน",
+      "edit_title": "แก้ไขโครงสร้าง",
+      "name_label": "ชื่อ:",
+      "display_order": "ลำดับการแสดงผล",
+      "active": "ใช้งาน",
+      "locked": "ล็อก",
+      "create_button": "สร้างโดเมน",
+      "update_button": "อัปเดตโดเมน",
+      "updating": "กำลังอัปเดต...",
+      "error": "ข้อผิดพลาด"
+    },
+    "common": {
+      "delete": "ลบ",
+      "clone": "คัดลอก",
+      "reset": "รีเซ็ต"
+    },
+    "canvas": {
+      "reset": {
+        "title": "รีเซ็ตฟอร์ม",
+        "description": "คุณแน่ใจหรือไม่ที่จะรีเซ็ตฟอร์ม? นี่จะรีเซ็ตคุณสมบัติทั้งหมดกลับสู่สถานะเดิม"
+      }
+    }
+  }
+}

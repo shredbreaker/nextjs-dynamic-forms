@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "tailwind-scrollbar";
+
+@custom-variant dark (&:is(.dark *));
+
+@layer base {
+  html {
+    font-family: "Inter", sans-serif;
+    /* Fix for iPad Chrome CSS loading issues
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none; */
+  }
+}
+
+@import "../../src/packages/shared-ui/shadcn/cms-shadcn.css";
+
+@theme inline {
+  --font-bitcount: var(--font-bitcount);
+  --font-open-sans: "Open Sans", sans-serif;
+  --font-jost: var(--font-jost);
+  --font-montserrat: var(--font-montserrat);
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(-1deg);
+  }
+  50% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(-1deg);
+  }
+}

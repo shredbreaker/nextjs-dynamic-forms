@@ -1,0 +1,11 @@
+-- CREATE TYPE cms_user_role AS ENUM (
+--   'admin', 'content-manager'
+-- );
+
+-- -- Create user role assignments table
+-- CREATE TABLE cms_user_role_assignments (
+--   user_id UUID NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE ON UPDATE CASCADE,
+--   user_role cms_user_role NOT NULL,
+--   PRIMARY KEY (user_id, user_role)
+-- );
+-- ALTER TABLE cms_user_role_assignments DISABLE ROW LEVEL SECURITY;
