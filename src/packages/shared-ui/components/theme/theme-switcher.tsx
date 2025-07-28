@@ -2,6 +2,7 @@
 
 import { MonitorCog, MoonIcon, SunIcon } from "lucide-react";
 import { useTheme } from "next-themes";
+import { useCallback } from "react";
 import { QuickTooltip } from "@shared-ui/components/ui/quick-tooltip";
 import { Toggle } from "@shared-ui/shadcn/components/ui/toggle";
 import { ClientOnly } from "@/packages/shared-ui/components/client-only";
@@ -19,7 +20,7 @@ export function ThemeSwitcherInner({ className }: { className?: string }) {
   const { theme, setTheme } = useTheme();
   const { t } = useCMSTranslations();
 
-  const cycleTheme = () => {
+  const cycleTheme = useCallback(() => {
     if (theme === "light") {
       setTheme("dark");
     } else if (theme === "dark") {
@@ -27,7 +28,7 @@ export function ThemeSwitcherInner({ className }: { className?: string }) {
     } else {
       setTheme("light");
     }
-  };
+  }, [theme, setTheme]);
 
   const getAriaLabel = () => {
     switch (theme) {

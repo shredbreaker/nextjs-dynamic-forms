@@ -5,6 +5,7 @@ import type { Metadata, Viewport } from "next";
 import { Bitcount_Grid_Double, Open_Sans, Jost, Montserrat } from "next/font/google";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
+import { ThemeProvider } from "next-themes";
 import { LocalizationProviderWrapper } from "@/components/providers/localization-provider-wrapper";
 import { routing } from "@/i18n/routing";
 
@@ -65,7 +66,9 @@ export default async function LocaleLayout({
     >
       <body>
         <NextIntlClientProvider>
-          <LocalizationProviderWrapper>{children}</LocalizationProviderWrapper>
+          <ThemeProvider>
+            <LocalizationProviderWrapper>{children}</LocalizationProviderWrapper>
+          </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>
