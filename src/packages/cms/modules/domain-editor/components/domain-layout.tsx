@@ -68,7 +68,7 @@ export const DomainLayout = memo(function DomainLayout() {
         </LayoutStoreHydrated>
       </div>
 
-      <div className="bg-muted flex overflow-hidden sm:px-12">
+      <div className="bg-muted flex justify-center overflow-hidden sm:px-12">
         {showPropertiesTree && (
           <div className="flex-none">
             <div className="scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent hover:scrollbar-thumb-gray-400 dark:scrollbar-thumb-gray-600 dark:hover:scrollbar-thumb-gray-500 mx-3 my-3 h-[calc(100%-1.5rem)] overflow-y-auto">

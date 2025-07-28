@@ -44,10 +44,10 @@ export default function DomainNameInput(): React.JSX.Element {
   const domainName = domain?.name?.[currentTranslation] || domain?.code || t("domain.unnamed");
 
   return (
-    <>
-      <div className="flex h-full flex-col items-center justify-center bg-blue-600">
-        <p className="text-muted-foreground flex truncate font-sans text-lg font-bold sm:text-2xl">{domainName}</p>
+    <div className="flex min-w-0 items-center justify-center">
+      <div className="flex min-w-0 items-center justify-center overflow-hidden">
+        <p className="text-muted-foreground truncate font-sans text-lg font-bold sm:text-2xl">{domainName}</p>
       </div>
-    </>
+    </div>
   );
 }
