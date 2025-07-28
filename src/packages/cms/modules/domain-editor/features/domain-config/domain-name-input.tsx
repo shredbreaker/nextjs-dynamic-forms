@@ -45,10 +45,8 @@ export default function DomainNameInput(): React.JSX.Element {
 
   return (
     <>
-      <div className="flex h-full w-full items-center">
-        <p className="text-muted-foreground flex overflow-auto font-sans text-2xl font-bold whitespace-nowrap sm:max-w-[250px]">
-          {domainName}
-        </p>
+      <div className="flex h-full flex-col items-center justify-center bg-blue-600">
+        <p className="text-muted-foreground flex truncate font-sans text-lg font-bold sm:text-2xl">{domainName}</p>
       </div>
     </>
   );

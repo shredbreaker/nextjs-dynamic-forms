@@ -68,10 +68,6 @@ function DataConflictDialogComponent() {
     resolveConflict("cancel");
   };
 
-  if (hasConflict) {
-    console.log("🚨 DataConflictDialog - SHOWING DIALOG");
-  }
-
   return (
     <AlertDialog open={hasConflict}>
       <AlertDialogContent>

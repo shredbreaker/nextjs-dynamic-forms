@@ -156,7 +156,6 @@ function usePropertyMetaInputBase(
   // Placeholder text using translations
   const placeholder = useMemo(() => {
     const fieldTranslationKey = `property.meta.number.${field.toString()}.label`;
-    console.log("fieldTranslationKey", fieldTranslationKey);
     return t(fieldTranslationKey);
   }, [t, field]);
 

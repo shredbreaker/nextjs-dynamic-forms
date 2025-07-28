@@ -29,7 +29,6 @@ export const PropertyMetaOptionSortingToggle = memo(function PropertyMetaOptionS
   useDebugRender("PropertyMetaOptionSortingToggle");
   const { value, setValue } = usePropertyMetaOptionSorting();
   const { t } = useCMSTranslations();
-  console.log("value", value);
   return (
     <ToggleGroup
       className="flex space-x-2"

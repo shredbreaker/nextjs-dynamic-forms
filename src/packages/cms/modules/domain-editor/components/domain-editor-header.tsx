@@ -70,15 +70,15 @@ export const DomainEditorHeader = memo(function DomainEditorHeader() {
       {/* Top Bar */}
       <header className="flex w-full flex-row items-center justify-between px-6 pt-4">
         {/* Left Side */}
-        <div className="flex flex-row justify-start space-x-2">
-          <DomainStoreHydrated fallback={<div className="h-8 w-32 animate-pulse rounded" />}>
+        <DomainStoreHydrated fallback={<div className="h-8 w-32 animate-pulse rounded" />}>
+          <div className="flex flex-row items-center justify-start space-x-2 bg-amber-600">
             <DomainNameInput />
             <ResetButton />
-          </DomainStoreHydrated>
-        </div>
+          </div>
+        </DomainStoreHydrated>
 
         {/* Right Side */}
-        <div className="flex flex-row justify-end space-x-2">
+        <div className="flex shrink-0 flex-row justify-end space-x-2">
           <LocaleSwitcher onSwitch={(locale) => setCurrentTranslation(locale)} />
           <ThemeSwitcher />
         </div>

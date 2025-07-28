@@ -151,7 +151,6 @@ export function RecordEditorExample() {
 
   // Handle save action
   const handleSave = (values: Record<string, Value>) => {
-    console.log("Saving record with values:", values);
     // In a real app, you would call an API here
   };
 

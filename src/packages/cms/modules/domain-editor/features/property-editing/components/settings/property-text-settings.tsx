@@ -47,9 +47,7 @@ export const PropertyTextMultilineSettings = memo(function PropertyTextMultiline
 
   const handleValueChange = useCallback(
     (value: string) => {
-      console.log("handleValueChange called with:", value);
       if (value) {
-        console.log("Calling setCurrentValue with:", value);
         setCurrentValue(value);
       }
     },

@@ -60,15 +60,15 @@ export function usePropertyPlaceholder(customPlaceholder?: string): string {
 
     // 2. Generate from property name in current translation
     if (currentProperty?.name?.[currentTranslation]) {
-      return `Enter ${currentProperty.name[currentTranslation]}...`;
+      return `${currentProperty.name[currentTranslation]}...`;
     }
 
     // 3. Generate from property code as fallback
     if (currentProperty?.code) {
-      return `Enter ${currentProperty.code}...`;
+      return `${currentProperty.code}...`;
     }
 
     // 4. Default fallback
-    return "Enter field";
+    return "...";
   }, [customPlaceholder, currentProperty?.name, currentProperty?.code, currentTranslation]);
 }
