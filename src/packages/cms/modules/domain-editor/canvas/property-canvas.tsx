@@ -1,8 +1,6 @@
 "use client";
 
 import { useEffect } from "react";
-import { cn } from "@shared-ui/lib/utils";
-import { AddPropertyButton } from "@cms/modules/domain-editor/components/ui";
 import { useDebugRender } from "@cms/modules/domain-editor/hooks";
 import { PropertyEditorCardList } from "./property-editor-list";
 // import CanvasDebugCard from "../../components/canvas-debug-card";
@@ -86,13 +84,11 @@ export default function PropertyCanvas() {
   }, []);
 
   return (
-    <div className="bg-muted flex h-full w-full flex-col items-start justify-between space-y-2 pb-4">
-      <div className="flex flex-1 flex-col justify-start space-y-0 overflow-y-auto px-6">
-        <PropertyEditorCardList />
-      </div>
-      <div className={cn("flex w-full items-center justify-center")}>
-        <AddPropertyButton />
-      </div>
+    // <div className="flex w-full flex-col items-start justify-between space-y-2 overflow-auto bg-red-400">
+    <div>
+      {/* <div className="flex flex-1 flex-col justify-start space-y-0 overflow-y-auto px-6"> */}
+      <PropertyEditorCardList />
+      {/* </div> */}
     </div>
   );
 }

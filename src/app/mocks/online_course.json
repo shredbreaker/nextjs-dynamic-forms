@@ -1,0 +1,447 @@
+[
+  {
+    "id": "1a2b3c4d-5e6f-7890-abcd-ef1234567890",
+    "name": {
+      "en": "Course Title",
+      "th": "ชื่อหลักสูตร",
+      "ru": "Название курса"
+    },
+    "description": {
+      "en": "The title of the course",
+      "th": "ชื่อของหลักสูตร",
+      "ru": "Название курса"
+    },
+    "code": "course_title",
+    "is_locked": true,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": false,
+      "max": 100
+    },
+    "display_order": 1,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "2b3c4d5e-6f7a-8901-bcde-f23456789abc",
+    "name": {
+      "en": "Course Description",
+      "th": "คำอธิบายหลักสูตร",
+      "ru": "Описание курса"
+    },
+    "description": {
+      "en": "Detailed description of the course",
+      "th": "คำอธิบายรายละเอียดของหลักสูตร",
+      "ru": "Подробное описание курса"
+    },
+    "code": "course_description",
+    "is_locked": false,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": true,
+      "max": 1000
+    },
+    "display_order": 2,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "3c4d5e6f-7a8b-9012-def3-456789abcdef",
+    "name": {
+      "en": "Category",
+      "th": "หมวดหมู่",
+      "ru": "Категория"
+    },
+    "description": {
+      "en": "Category of the course (e.g., Programming, Business)",
+      "th": "หมวดหมู่ของหลักสูตร (เช่น การเขียนโปรแกรม, ธุรกิจ)",
+      "ru": "Категория курса (например, программирование, бизнес)"
+    },
+    "code": "category",
+    "is_locked": true,
+    "type": "option",
+    "meta": {
+      "type": "option",
+      "multi": true,
+      "sorting": "alphabet"
+    },
+    "options": [
+      {
+        "option_id": "4d5e6f7a-8b9c-0123-ef45-6789abcdef01",
+        "property_id": "3c4d5e6f-7a8b-9012-def3-456789abcdef",
+        "name": {
+          "en": "Programming",
+          "th": "การเขียนโปรแกรม",
+          "ru": "Программирование"
+        },
+        "display_order": 1,
+        "code": "programming",
+        "is_new": false
+      },
+      {
+        "option_id": "5e6f7a8b-9c0d-1234-f567-89abcdef0123",
+        "property_id": "3c4d5e6f-7a8b-9012-def3-456789abcdef",
+        "name": {
+          "en": "Business",
+          "th": "ธุรกิจ",
+          "ru": "Бизнес"
+        },
+        "display_order": 2,
+        "code": "business",
+        "is_new": false
+      },
+      {
+        "option_id": "6f7a8b9c-0d1e-2345-6789-abcdef012345",
+        "property_id": "3c4d5e6f-7a8b-9012-def3-456789abcdef",
+        "name": {
+          "en": "Design",
+          "th": "การออกแบบ",
+          "ru": "Дизайн"
+        },
+        "display_order": 3,
+        "code": "design",
+        "is_new": false
+      }
+    ],
+    "display_order": 3,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "7a8b9c0d-1e2f-3456-789a-bcdef0123456",
+    "name": {
+      "en": "Module Title",
+      "th": "ชื่อโมดูล",
+      "ru": "Название модуля"
+    },
+    "description": {
+      "en": "Title of the course module",
+      "th": "ชื่อของโมดูลในหลักสูตร",
+      "ru": "Название модуля курса"
+    },
+    "code": "module_title",
+    "is_locked": true,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": false,
+      "max": 100
+    },
+    "display_order": 4,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "8b9c0d1e-2f3a-4567-89ab-cdef01234567",
+    "name": {
+      "en": "Module Description",
+      "th": "คำอธิบายโมดูล",
+      "ru": "Описание модуля"
+    },
+    "description": {
+      "en": "Description of the module content",
+      "th": "คำอธิบายของเนื้อหาในโมดูล",
+      "ru": "Описание содержимого модуля"
+    },
+    "code": "module_description",
+    "is_locked": false,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": true,
+      "max": 500
+    },
+    "display_order": 5,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "9c0d1e2f-3a4b-5678-9abc-def012345678",
+    "name": {
+      "en": "Lesson Title",
+      "th": "ชื่อบทเรียน",
+      "ru": "Название урока"
+    },
+    "description": {
+      "en": "Title of the individual lesson",
+      "th": "ชื่อของบทเรียนแต่ละบท",
+      "ru": "Название отдельного урока"
+    },
+    "code": "lesson_title",
+    "is_locked": true,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": false,
+      "max": 100
+    },
+    "display_order": 6,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "0d1e2f3a-4b5c-6789-abcd-ef123456789a",
+    "name": {
+      "en": "Lesson Content",
+      "th": "เนื้อหาบทเรียน",
+      "ru": "Содержание урока"
+    },
+    "description": {
+      "en": "Detailed content or text of the lesson",
+      "th": "เนื้อหาหรือข้อความโดยละเอียดของบทเรียน",
+      "ru": "Подробное содержание или текст урока"
+    },
+    "code": "lesson_content",
+    "is_locked": false,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": true,
+      "max": 5000
+    },
+    "display_order": 7,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "1e2f3a4b-5c6d-7890-bcde-f23456789abc",
+    "name": {
+      "en": "Video URL",
+      "th": "URL วิดีโอ",
+      "ru": "URL видео"
+    },
+    "description": {
+      "en": "URL to the lesson video content",
+      "th": "URL ไปยังเนื้อหาวิดีโอของบทเรียน",
+      "ru": "URL к видеоконтенту урока"
+    },
+    "code": "video_url",
+    "is_locked": true,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": false,
+      "max": 1000
+    },
+    "display_order": 8,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "2f3a4b5c-6d7e-8901-cdef-3456789abcde",
+    "name": {
+      "en": "Lesson Duration",
+      "th": "ระยะเวลาบทเรียน",
+      "ru": "Продолжительность урока"
+    },
+    "description": {
+      "en": "Duration of the lesson in minutes",
+      "th": "ระยะเวลาของบทเรียนเป็นนาที",
+      "ru": "Продолжительность урока в минутах"
+    },
+    "code": "lesson_duration",
+    "is_locked": false,
+    "type": "number",
+    "meta": {
+      "type": "number",
+      "integer": true,
+      "min": 1,
+      "max": 120
+    },
+    "display_order": 9,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "3a4b5c6d-7e8f-9012-def3-456789abcdef",
+    "name": {
+      "en": "Difficulty Level",
+      "th": "ระดับความยาก",
+      "ru": "Уровень сложности"
+    },
+    "description": {
+      "en": "Difficulty level of the course",
+      "th": "ระดับความยากของหลักสูตร",
+      "ru": "Уровень сложности курса"
+    },
+    "code": "difficulty_level",
+    "is_locked": false,
+    "type": "option",
+    "meta": {
+      "type": "option",
+      "multi": false,
+      "sorting": "manual"
+    },
+    "options": [
+      {
+        "option_id": "4b5c6d7e-8f9a-0123-ef45-6789abcdef01",
+        "property_id": "3a4b5c6d-7e8f-9012-def3-456789abcdef",
+        "name": {
+          "en": "Beginner",
+          "th": "ระดับเริ่มต้น",
+          "ru": "Начальный"
+        },
+        "display_order": 1,
+        "code": "beginner",
+        "is_new": false
+      },
+      {
+        "option_id": "5c6d7e8f-9a0b-1234-f567-89abcdef0123",
+        "property_id": "3a4b5c6d-7e8f-9012-def3-456789abcdef",
+        "name": {
+          "en": "Intermediate",
+          "th": "ระดับกลาง",
+          "ru": "Средний"
+        },
+        "display_order": 2,
+        "code": "intermediate",
+        "is_new": false
+      },
+      {
+        "option_id": "6d7e8f9a-0b1c-2345-6789-abcdef012345",
+        "property_id": "3a4b5c6d-7e8f-9012-def3-456789abcdef",
+        "name": {
+          "en": "Advanced",
+          "th": "ระดับสูง",
+          "ru": "Продвинутый"
+        },
+        "display_order": 3,
+        "code": "advanced",
+        "is_new": false
+      }
+    ],
+    "display_order": 10,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "7e8f9a0b-1c2d-3456-789a-bcdef0123456",
+    "name": {
+      "en": "Instructor Name",
+      "th": "ชื่อผู้สอน",
+      "ru": "Имя инструктора"
+    },
+    "description": {
+      "en": "Name of the course instructor",
+      "th": "ชื่อของผู้สอนหลักสูตร",
+      "ru": "Имя инструктора курса"
+    },
+    "code": "instructor_name",
+    "is_locked": true,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": false,
+      "max": 100
+    },
+    "display_order": 11,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "8f9a0b1c-2d3e-4567-89ab-cdef01234567",
+    "name": {
+      "en": "Price",
+      "th": "ราคา",
+      "ru": "Цена"
+    },
+    "description": {
+      "en": "Price of the course in local currency",
+      "th": "ราคาของหลักสูตรในสกุลเงินท้องถิ่น",
+      "ru": "Стоимость курса в местной валюте"
+    },
+    "code": "price",
+    "is_locked": true,
+    "type": "number",
+    "meta": {
+      "type": "number",
+      "integer": false,
+      "min": 0,
+      "max": 10000
+    },
+    "display_order": 12,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "9a0b1c2d-3e4f-5678-9abc-def123456789",
+    "name": {
+      "en": "Is Free",
+      "th": "ฟรี",
+      "ru": "Бесплатно"
+    },
+    "description": {
+      "en": "Indicates if the course is free",
+      "th": "ระบุว่าหลักสูตรนี้ฟรีหรือไม่",
+      "ru": "Указывает, является ли курс бесплатным"
+    },
+    "code": "is_free",
+    "is_locked": false,
+    "type": "bool",
+    "meta": null,
+    "display_order": 13,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "0b1c2d3e-4f5a-6789-abcd-ef23456789ab",
+    "name": {
+      "en": "Internal Notes",
+      "th": "บันทึกภายใน",
+      "ru": "Внутренние заметки"
+    },
+    "description": {
+      "en": "Internal notes for course administrators",
+      "th": "บันทึกภายในสำหรับผู้ดูแลหลักสูตร",
+      "ru": "Внутренние заметки для администраторов курса"
+    },
+    "code": "internal_notes",
+    "is_locked": false,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": true,
+      "max": 2000
+    },
+    "display_order": 14,
+    "is_required": false,
+    "is_private": true,
+    "is_new": false
+  },
+  {
+    "id": "1c2d3e4f-5a6b-7890-bcde-f3456789abcd",
+    "name": {
+      "en": "Certificate Available",
+      "th": "มีใบรับรอง",
+      "ru": "Доступен сертификат"
+    },
+    "description": {
+      "en": "Indicates if a certificate is provided upon completion",
+      "th": "ระบุว่ามีใบรับรองเมื่อสำเร็จหลักสูตรหรือไม่",
+      "ru": "Указывает, выдается ли сертификат по завершении"
+    },
+    "code": "certificate_available",
+    "is_locked": false,
+    "type": "bool",
+    "meta": null,
+    "display_order": 15,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  }
+]

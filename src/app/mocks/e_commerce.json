@@ -1,0 +1,528 @@
+[
+  {
+    "id": "1a2b3c4d-5e6f-7890-abcd-ef1234567890",
+    "name": {
+      "en": "Product Name",
+      "th": "ชื่อสินค้า",
+      "ru": "Название продукта"
+    },
+    "description": {
+      "en": "The name of the product",
+      "th": "ชื่อของสินค้า",
+      "ru": "Название продукта"
+    },
+    "code": "product_name",
+    "is_locked": true,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": false,
+      "max": 100
+    },
+    "display_order": 1,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "2b3c4d5e-6f7a-8901-bcde-f23456789abc",
+    "name": {
+      "en": "Product Description",
+      "th": "คำอธิบายสินค้า",
+      "ru": "Описание продукта"
+    },
+    "description": {
+      "en": "Detailed description of the product",
+      "th": "คำอธิบายรายละเอียดของสินค้า",
+      "ru": "Подробное описание продукта"
+    },
+    "code": "product_description",
+    "is_locked": false,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": true,
+      "max": 1000
+    },
+    "display_order": 2,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "3c4d5e6f-7a8b-9012-def3-456789abcdef",
+    "name": {
+      "en": "Category",
+      "th": "หมวดหมู่",
+      "ru": "Категория"
+    },
+    "description": {
+      "en": "Category of the product (e.g., Clothing, Electronics)",
+      "th": "หมวดหมู่ของสินค้า (เช่น เสื้อผ้า, อิเล็กทรอนิกส์)",
+      "ru": "Категория продукта (например, одежда, электроника)"
+    },
+    "code": "category",
+    "is_locked": true,
+    "type": "option",
+    "meta": {
+      "type": "option",
+      "multi": true,
+      "sorting": "alphabet"
+    },
+    "options": [
+      {
+        "option_id": "4d5e6f7a-8b9c-0123-ef45-6789abcdef01",
+        "property_id": "3c4d5e6f-7a8b-9012-def3-456789abcdef",
+        "name": {
+          "en": "Clothing",
+          "th": "เสื้อผ้า",
+          "ru": "Одежда"
+        },
+        "display_order": 1,
+        "code": "clothing",
+        "is_new": false
+      },
+      {
+        "option_id": "5e6f7a8b-9c0d-1234-f567-89abcdef0123",
+        "property_id": "3c4d5e6f-7a8b-9012-def3-456789abcdef",
+        "name": {
+          "en": "Electronics",
+          "th": "อิเล็กทรอนิกส์",
+          "ru": "Электроника"
+        },
+        "display_order": 2,
+        "code": "electronics",
+        "is_new": false
+      },
+      {
+        "option_id": "6f7a8b9c-0d1e-2345-6789-abcdef012345",
+        "property_id": "3c4d5e6f-7a8b-9012-def3-456789abcdef",
+        "name": {
+          "en": "Home & Garden",
+          "th": "บ้านและสวน",
+          "ru": "Дом и сад"
+        },
+        "display_order": 3,
+        "code": "home_garden",
+        "is_new": false
+      }
+    ],
+    "display_order": 3,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "7a8b9c0d-1e2f-3456-789a-bcdef0123456",
+    "name": {
+      "en": "SKU",
+      "th": "รหัส SKU",
+      "ru": "Артикул"
+    },
+    "description": {
+      "en": "Stock Keeping Unit identifier for the product variant",
+      "th": "ตัวระบุหน่วยเก็บสต็อกสำหรับตัวแปรสินค้า",
+      "ru": "Идентификатор единицы хранения для варианта продукта"
+    },
+    "code": "sku",
+    "is_locked": true,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": false,
+      "max": 50
+    },
+    "display_order": 4,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "8b9c0d1e-2f3a-4567-89ab-cdef01234567",
+    "name": {
+      "en": "Size",
+      "th": "ขนาด",
+      "ru": "Размер"
+    },
+    "description": {
+      "en": "Size variant of the product (e.g., S, M, L)",
+      "th": "ตัวแปรขนาดของสินค้า (เช่น S, M, L)",
+      "ru": "Вариант размера продукта (например, S, M, L)"
+    },
+    "code": "size",
+    "is_locked": false,
+    "type": "option",
+    "meta": {
+      "type": "option",
+      "multi": false,
+      "sorting": "manual"
+    },
+    "options": [
+      {
+        "option_id": "9c0d1e2f-3a4b-5678-9abc-def012345678",
+        "property_id": "8b9c0d1e-2f3a-4567-89ab-cdef01234567",
+        "name": {
+          "en": "Small",
+          "th": "เล็ก",
+          "ru": "Маленький"
+        },
+        "display_order": 1,
+        "code": "small",
+        "is_new": false
+      },
+      {
+        "option_id": "0d1e2f3a-4b5c-6789-abcd-ef123456789a",
+        "property_id": "8b9c0d1e-2f3a-4567-89ab-cdef01234567",
+        "name": {
+          "en": "Medium",
+          "th": "กลาง",
+          "ru": "Средний"
+        },
+        "display_order": 2,
+        "code": "medium",
+        "is_new": false
+      },
+      {
+        "option_id": "1e2f3a4b-5c6d-7890-bcde-f23456789abc",
+        "property_id": "8b9c0d1e-2f3a-4567-89ab-cdef01234567",
+        "name": {
+          "en": "Large",
+          "th": "ใหญ่",
+          "ru": "Большой"
+        },
+        "display_order": 3,
+        "code": "large",
+        "is_new": false
+      }
+    ],
+    "display_order": 5,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "2f3a4b5c-6d7e-8901-cdef-3456789abcde",
+    "name": {
+      "en": "Color",
+      "th": "สี",
+      "ru": "Цвет"
+    },
+    "description": {
+      "en": "Color variant of the product",
+      "th": "ตัวแปรสีของสินค้า",
+      "ru": "Вариант цвета продукта"
+    },
+    "code": "color",
+    "is_locked": false,
+    "type": "option",
+    "meta": {
+      "type": "option",
+      "multi": false,
+      "sorting": "alphabet"
+    },
+    "options": [
+      {
+        "option_id": "3a4b5c6d-7e8f-9012-def3-456789abcdef",
+        "property_id": "2f3a4b5c-6d7e-8901-cdef-3456789abcde",
+        "name": {
+          "en": "Red",
+          "th": "แดง",
+          "ru": "Красный"
+        },
+        "display_order": 1,
+        "code": "red",
+        "is_new": false
+      },
+      {
+        "option_id": "4b5c6d7e-8f9a-0123-ef45-6789abcdef01",
+        "property_id": "2f3a4b5c-6d7e-8901-cdef-3456789abcde",
+        "name": {
+          "en": "Blue",
+          "th": "น้ำเงิน",
+          "ru": "Синий"
+        },
+        "display_order": 2,
+        "code": "blue",
+        "is_new": false
+      },
+      {
+        "option_id": "5c6d7e8f-9a0b-1234-f567-89abcdef0123",
+        "property_id": "2f3a4b5c-6d7e-8901-cdef-3456789abcde",
+        "name": {
+          "en": "Black",
+          "th": "ดำ",
+          "ru": "Черный"
+        },
+        "display_order": 3,
+        "code": "black",
+        "is_new": false
+      }
+    ],
+    "display_order": 6,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "6d7e8f9a-0b1c-2345-6789-abcdef012345",
+    "name": {
+      "en": "Stock Quantity",
+      "th": "จำนวนสต็อก",
+      "ru": "Количество на складе"
+    },
+    "description": {
+      "en": "Available stock quantity for the product variant",
+      "th": "จำนวนสต็อกที่มีสำหรับตัวแปรสินค้า",
+      "ru": "Доступное количество на складе для варианта продукта"
+    },
+    "code": "stock_quantity",
+    "is_locked": true,
+    "type": "number",
+    "meta": {
+      "type": "number",
+      "integer": true,
+      "min": 0,
+      "max": 10000
+    },
+    "display_order": 7,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "7e8f9a0b-1c2d-3456-789a-bcdef0123456",
+    "name": {
+      "en": "Base Price",
+      "th": "ราคาพื้นฐาน",
+      "ru": "Базовая цена"
+    },
+    "description": {
+      "en": "Base price of the product variant",
+      "th": "ราคาพื้นฐานของตัวแปรสินค้า",
+      "ru": "Базовая цена варианта продукта"
+    },
+    "code": "base_price",
+    "is_locked": true,
+    "type": "number",
+    "meta": {
+      "type": "number",
+      "integer": false,
+      "min": 0,
+      "max": 100000
+    },
+    "display_order": 8,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "8f9a0b1c-2d3e-4567-89ab-cdef01234567",
+    "name": {
+      "en": "Discount Percentage",
+      "th": "เปอร์เซ็นต์ส่วนลด",
+      "ru": "Процент скидки"
+    },
+    "description": {
+      "en": "Percentage discount applied to the product",
+      "th": "เปอร์เซ็นต์ส่วนลดที่ใช้กับสินค้า",
+      "ru": "Процент скидки, применяемый к продукту"
+    },
+    "code": "discount_percentage",
+    "is_locked": false,
+    "type": "number",
+    "meta": {
+      "type": "number",
+      "integer": false,
+      "min": 0,
+      "max": 100
+    },
+    "display_order": 9,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "9a0b1c2d-3e4f-5678-9abc-def123456789",
+    "name": {
+      "en": "Promotion Name",
+      "th": "ชื่อโปรโมชั่น",
+      "ru": "Название акции"
+    },
+    "description": {
+      "en": "Name of the promotional campaign",
+      "th": "ชื่อของแคมเปญโปรโมชั่น",
+      "ru": "Название рекламной кампании"
+    },
+    "code": "promotion_name",
+    "is_locked": false,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": false,
+      "max": 100
+    },
+    "display_order": 10,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "0b1c2d3e-4f5a-6789-abcd-ef23456789ab",
+    "name": {
+      "en": "Tags",
+      "th": "แท็ก",
+      "ru": "Теги"
+    },
+    "description": {
+      "en": "Tags or keywords associated with the product",
+      "th": "แท็กหรือคำสำคัญที่เกี่ยวข้องกับสินค้า",
+      "ru": "Теги или ключевые слова, связанные с продуктом"
+    },
+    "code": "tags",
+    "is_locked": false,
+    "type": "option",
+    "meta": {
+      "type": "option",
+      "multi": true,
+      "sorting": "alphabet"
+    },
+    "options": [
+      {
+        "option_id": "1c2d3e4f-5a6b-7890-bcde-f3456789abcd",
+        "property_id": "0b1c2d3e-4f5a-6789-abcd-ef23456789ab",
+        "name": {
+          "en": "New Arrival",
+          "th": "สินค้าใหม่",
+          "ru": "Новое поступление"
+        },
+        "display_order": 1,
+        "code": "new_arrival",
+        "is_new": false
+      },
+      {
+        "option_id": "2d3e4f5a-6b7c-8901-cdef-456789abcdef",
+        "property_id": "0b1c2d3e-4f5a-6789-abcd-ef23456789ab",
+        "name": {
+          "en": "Best Seller",
+          "th": "สินค้าขายดี",
+          "ru": "Бестселлер"
+        },
+        "display_order": 2,
+        "code": "best_seller",
+        "is_new": false
+      },
+      {
+        "option_id": "3e4f5a6b-7c8d-9012-def3-56789abcdef0",
+        "property_id": "0b1c2d3e-4f5a-6789-abcd-ef23456789ab",
+        "name": {
+          "en": "Limited Edition",
+          "th": "รุ่นจำกัด",
+          "ru": "Ограниченный выпуск"
+        },
+        "display_order": 3,
+        "code": "limited_edition",
+        "is_new": false
+      }
+    ],
+    "display_order": 11,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "4f5a6b7c-8d9e-0123-ef45-6789abcdef01",
+    "name": {
+      "en": "Product Images",
+      "th": "รูปภาพสินค้า",
+      "ru": "Изображения продукта"
+    },
+    "description": {
+      "en": "URLs to images of the product",
+      "th": "URL ไปยังรูปภาพของสินค้า",
+      "ru": "URL к изображениям продукта"
+    },
+    "code": "product_images",
+    "is_locked": false,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": true,
+      "max": 2000
+    },
+    "display_order": 12,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "5a6b7c8d-9e0f-1234-f567-89abcdef0123",
+    "name": {
+      "en": "Is Available",
+      "th": "มีจำหน่าย",
+      "ru": "В наличии"
+    },
+    "description": {
+      "en": "Indicates if the product variant is currently available",
+      "th": "ระบุว่าตัวแปรสินค้ามีจำหน่ายในขณะนี้หรือไม่",
+      "ru": "Указывает, доступен ли вариант продукта в настоящее время"
+    },
+    "code": "is_available",
+    "is_locked": true,
+    "type": "bool",
+    "meta": null,
+    "display_order": 13,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "6b7c8d9e-0f1a-2345-6789-abcdef012345",
+    "name": {
+      "en": "Brand",
+      "th": "แบรนด์",
+      "ru": "Бренд"
+    },
+    "description": {
+      "en": "Brand of the product",
+      "th": "แบรนด์ของสินค้า",
+      "ru": "Бренд продукта"
+    },
+    "code": "brand",
+    "is_locked": false,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": false,
+      "max": 100
+    },
+    "display_order": 14,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "7c8d9e0f-1a2b-3456-789a-bcdef0123456",
+    "name": {
+      "en": "Internal Notes",
+      "th": "บันทึกภายใน",
+      "ru": "Внутренние заметки"
+    },
+    "description": {
+      "en": "Internal notes for store managers",
+      "th": "บันทึกภายในสำหรับผู้จัดการร้าน",
+      "ru": "Внутренние заметки для менеджеров магазина"
+    },
+    "code": "internal_notes",
+    "is_locked": false,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": true,
+      "max": 2000
+    },
+    "display_order": 15,
+    "is_required": false,
+    "is_private": true,
+    "is_new": false
+  }
+]

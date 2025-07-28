@@ -1,3 +1,0 @@
-3. News Publishing System
-Articles, categories, tags
-Localized titles and bodies

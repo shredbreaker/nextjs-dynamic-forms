@@ -117,7 +117,7 @@ export function ReactiveValueOptionInput({
   // Render unified button-style selectors (like size input)
   return (
     <div className={containerClass}>
-      <div className="mb-2 text-sm font-medium">{isRequired && <span className="ml-1 text-red-500">*</span>}</div>
+      {/* <div className="mb-2 text-sm font-medium">{isRequired && <span className="ml-1 text-red-500">*</span>}</div> */}
 
       <div className="flex flex-wrap gap-2">
         {options.map((option) => {

@@ -1,0 +1,523 @@
+[
+  {
+    "id": "1a2b3c4d-5e6f-7890-abcd-ef1234567890",
+    "name": {
+      "en": "Article Title",
+      "th": "หัวข้อบทความ",
+      "ru": "Заголовок статьи"
+    },
+    "description": {
+      "en": "The title of the news article",
+      "th": "หัวข้อของบทความข่าว",
+      "ru": "Заголовок новостной статьи"
+    },
+    "code": "article_title",
+    "is_locked": true,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": false,
+      "max": 200
+    },
+    "display_order": 1,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "2b3c4d5e-6f7a-8901-bcde-f23456789abc",
+    "name": {
+      "en": "Article Body",
+      "th": "เนื้อหาบทความ",
+      "ru": "Текст статьи"
+    },
+    "description": {
+      "en": "The main content of the article",
+      "th": "เนื้อหาหลักของบทความ",
+      "ru": "Основное содержание статьи"
+    },
+    "code": "article_body",
+    "is_locked": true,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": true,
+      "max": 10000
+    },
+    "display_order": 2,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "3c4d5e6f-7a8b-9012-def3-456789abcdef",
+    "name": {
+      "en": "Category",
+      "th": "หมวดหมู่",
+      "ru": "Категория"
+    },
+    "description": {
+      "en": "Category of the article (e.g., Politics, Sports)",
+      "th": "หมวดหมู่ของบทความ (เช่น การเมือง, กีฬา)",
+      "ru": "Категория статьи (например, политика, спорт)"
+    },
+    "code": "category",
+    "is_locked": true,
+    "type": "option",
+    "meta": {
+      "type": "option",
+      "multi": true,
+      "sorting": "alphabet"
+    },
+    "options": [
+      {
+        "option_id": "4d5e6f7a-8b9c-0123-ef45-6789abcdef01",
+        "property_id": "3c4d5e6f-7a8b-9012-def3-456789abcdef",
+        "name": {
+          "en": "Politics",
+          "th": "การเมือง",
+          "ru": "Политика"
+        },
+        "display_order": 1,
+        "code": "politics",
+        "is_new": false
+      },
+      {
+        "option_id": "5e6f7a8b-9c0d-1234-f567-89abcdef0123",
+        "property_id": "3c4d5e6f-7a8b-9012-def3-456789abcdef",
+        "name": {
+          "en": "Sports",
+          "th": "กีฬา",
+          "ru": "Спорт"
+        },
+        "display_order": 2,
+        "code": "sports",
+        "is_new": false
+      },
+      {
+        "option_id": "6f7a8b9c-0d1e-2345-6789-abcdef012345",
+        "property_id": "3c4d5e6f-7a8b-9012-def3-456789abcdef",
+        "name": {
+          "en": "Technology",
+          "th": "เทคโนโลยี",
+          "ru": "Технологии"
+        },
+        "display_order": 3,
+        "code": "technology",
+        "is_new": false
+      }
+    ],
+    "display_order": 3,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "7a8b9c0d-1e2f-3456-789a-bcdef0123456",
+    "name": {
+      "en": "Tags",
+      "th": "แท็ก",
+      "ru": "Теги"
+    },
+    "description": {
+      "en": "Tags or keywords associated with the article",
+      "th": "แท็กหรือคำสำคัญที่เกี่ยวข้องกับบทความ",
+      "ru": "Теги или ключевые слова, связанные со статьей"
+    },
+    "code": "tags",
+    "is_locked": false,
+    "type": "option",
+    "meta": {
+      "type": "option",
+      "multi": true,
+      "sorting": "alphabet"
+    },
+    "options": [
+      {
+        "option_id": "8b9c0d1e-2f3a-4567-89ab-cdef01234567",
+        "property_id": "7a8b9c0d-1e2f-3456-789a-bcdef0123456",
+        "name": {
+          "en": "Breaking News",
+          "th": "ข่าวด่วน",
+          "ru": "Срочные новости"
+        },
+        "display_order": 1,
+        "code": "breaking_news",
+        "is_new": false
+      },
+      {
+        "option_id": "9c0d1e2f-3a4b-5678-9abc-def012345678",
+        "property_id": "7a8b9c0d-1e2f-3456-789a-bcdef0123456",
+        "name": {
+          "en": "Local",
+          "th": "ท้องถิ่น",
+          "ru": "Местные"
+        },
+        "display_order": 2,
+        "code": "local",
+        "is_new": false
+      },
+      {
+        "option_id": "0d1e2f3a-4b5c-6789-abcd-ef123456789a",
+        "property_id": "7a8b9c0d-1e2f-3456-789a-bcdef0123456",
+        "name": {
+          "en": "International",
+          "th": "ระหว่างประเทศ",
+          "ru": "Международные"
+        },
+        "display_order": 3,
+        "code": "international",
+        "is_new": false
+      }
+    ],
+    "display_order": 4,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "1e2f3a4b-5c6d-7890-bcde-f23456789abc",
+    "name": {
+      "en": "Publication Date",
+      "th": "วันที่เผยแพร่",
+      "ru": "Дата публикации"
+    },
+    "description": {
+      "en": "Date the article is published",
+      "th": "วันที่เผยแพร่บทความ",
+      "ru": "Дата публикации статьи"
+    },
+    "code": "publication_date",
+    "is_locked": true,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": false,
+      "max": 10
+    },
+    "display_order": 5,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "2f3a4b5c-6d7e-8901-cdef-3456789abcde",
+    "name": {
+      "en": "Author",
+      "th": "ผู้เขียน",
+      "ru": "Автор"
+    },
+    "description": {
+      "en": "Name of the article author",
+      "th": "ชื่อของผู้เขียนบทความ",
+      "ru": "Имя автора статьи"
+    },
+    "code": "author",
+    "is_locked": true,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": false,
+      "max": 100
+    },
+    "display_order": 6,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "3a4b5c6d-7e8f-9012-def3-456789abcdef",
+    "name": {
+      "en": "Featured Image URL",
+      "th": "URL รูปภาพเด่น",
+      "ru": "URL избранного изображения"
+    },
+    "description": {
+      "en": "URL to the featured image for the article",
+      "th": "URL ไปยังรูปภาพเด่นของบทความ",
+      "ru": "URL к избранному изображению для статьи"
+    },
+    "code": "featured_image",
+    "is_locked": false,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": false,
+      "max": 1000
+    },
+    "display_order": 7,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "4b5c6d7e-8f9a-0123-ef45-6789abcdef01",
+    "name": {
+      "en": "Is Featured",
+      "th": "เป็นบทความเด่น",
+      "ru": "Избранная статья"
+    },
+    "description": {
+      "en": "Indicates if the article is featured",
+      "th": "ระบุว่าบทความนี้เป็นบทความเด่นหรือไม่",
+      "ru": "Указывает, является ли статья избранной"
+    },
+    "code": "is_featured",
+    "is_locked": false,
+    "type": "bool",
+    "meta": null,
+    "display_order": 8,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "5c6d7e8f-9a0b-1234-f567-89abcdef0123",
+    "name": {
+      "en": "Status",
+      "th": "สถานะ",
+      "ru": "Статус"
+    },
+    "description": {
+      "en": "Publication status of the article",
+      "th": "สถานะการเผยแพร่ของบทความ",
+      "ru": "Статус публикации статьи"
+    },
+    "code": "status",
+    "is_locked": true,
+    "type": "option",
+    "meta": {
+      "type": "option",
+      "multi": false,
+      "sorting": "manual"
+    },
+    "options": [
+      {
+        "option_id": "6d7e8f9a-0b1c-2345-6789-abcdef012345",
+        "property_id": "5c6d7e8f-9a0b-1234-f567-89abcdef0123",
+        "name": {
+          "en": "Draft",
+          "th": "ร่าง",
+          "ru": "Черновик"
+        },
+        "display_order": 1,
+        "code": "draft",
+        "is_new": false
+      },
+      {
+        "option_id": "7e8f9a0b-1c2d-3456-789a-bcdef0123456",
+        "property_id": "5c6d7e8f-9a0b-1234-f567-89abcdef0123",
+        "name": {
+          "en": "Published",
+          "th": "เผยแพร่",
+          "ru": "Опубликовано"
+        },
+        "display_order": 2,
+        "code": "published",
+        "is_new": false
+      },
+      {
+        "option_id": "8f9a0b1c-2d3e-4567-89ab-cdef01234567",
+        "property_id": "5c6d7e8f-9a0b-1234-f567-89abcdef0123",
+        "name": {
+          "en": "Archived",
+          "th": "เก็บถาวร",
+          "ru": "Архивировано"
+        },
+        "display_order": 3,
+        "code": "archived",
+        "is_new": false
+      }
+    ],
+    "display_order": 9,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "9a0b1c2d-3e4f-5678-9abc-def123456789",
+    "name": {
+      "en": "Word Count",
+      "th": "จำนวนคำ",
+      "ru": "Количество слов"
+    },
+    "description": {
+      "en": "Word count of the article",
+      "th": "จำนวนคำของบทความ",
+      "ru": "Количество слов в статье"
+    },
+    "code": "word_count",
+    "is_locked": false,
+    "type": "number",
+    "meta": {
+      "type": "number",
+      "integer": true,
+      "min": 0,
+      "max": 10000
+    },
+    "display_order": 10,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "0b1c2d3e-4f5a-6789-abcd-ef23456789ab",
+    "name": {
+      "en": "Editor Notes",
+      "th": "บันทึกของบรรณาธิการ",
+      "ru": "Заметки редактора"
+    },
+    "description": {
+      "en": "Internal notes for editors",
+      "th": "บันทึกภายในสำหรับบรรณาธิการ",
+      "ru": "Внутренние заметки для редакторов"
+    },
+    "code": "editor_notes",
+    "is_locked": false,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": true,
+      "max": 2000
+    },
+    "display_order": 11,
+    "is_required": false,
+    "is_private": true,
+    "is_new": false
+  },
+  {
+    "id": "1c2d3e4f-5a6b-7890-bcde-f3456789abcd",
+    "name": {
+      "en": "Source",
+      "th": "แหล่งที่มา",
+      "ru": "Источник"
+    },
+    "description": {
+      "en": "Source or reference for the article",
+      "th": "แหล่งที่มาหรือการอ้างอิงสำหรับบทความ",
+      "ru": "Источник или ссылка для статьи"
+    },
+    "code": "source",
+    "is_locked": false,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": false,
+      "max": 500
+    },
+    "display_order": 12,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "2d3e4f5a-6b7c-8901-cdef-456789abcdef",
+    "name": {
+      "en": "Language",
+      "th": "ภาษา",
+      "ru": "Язык"
+    },
+    "description": {
+      "en": "Primary language of the article",
+      "th": "ภาษาหลักของบทความ",
+      "ru": "Основной язык статьи"
+    },
+    "code": "language",
+    "is_locked": true,
+    "type": "option",
+    "meta": {
+      "type": "option",
+      "multi": false,
+      "sorting": "alphabet"
+    },
+    "options": [
+      {
+        "option_id": "3e4f5a6b-7c8d-9012-def3-56789abcdef0",
+        "property_id": "2d3e4f5a-6b7c-8901-cdef-456789abcdef",
+        "name": {
+          "en": "English",
+          "th": "อังกฤษ",
+          "ru": "Английский"
+        },
+        "display_order": 1,
+        "code": "english",
+        "is_new": false
+      },
+      {
+        "option_id": "4f5a6b7c-8d9e-0123-ef45-6789abcdef01",
+        "property_id": "2d3e4f5a-6b7c-8901-cdef-456789abcdef",
+        "name": {
+          "en": "Thai",
+          "th": "ไทย",
+          "ru": "Тайский"
+        },
+        "display_order": 2,
+        "code": "thai",
+        "is_new": false
+      },
+      {
+        "option_id": "5a6b7c8d-9e0f-1234-f567-89abcdef0123",
+        "property_id": "2d3e4f5a-6b7c-8901-cdef-456789abcdef",
+        "name": {
+          "en": "Russian",
+          "th": "รัสเซีย",
+          "ru": "Русский"
+        },
+        "display_order": 3,
+        "code": "russian",
+        "is_new": false
+      }
+    ],
+    "display_order": 13,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "6b7c8d9e-0f1a-2345-6789-abcdef012345",
+    "name": {
+      "en": "Is Sponsored",
+      "th": "ได้รับการสนับสนุน",
+      "ru": "Спонсировано"
+    },
+    "description": {
+      "en": "Indicates if the article is sponsored content",
+      "th": "ระบุว่าบทความนี้เป็นเนื้อหาที่ได้รับการสนับสนุนหรือไม่",
+      "ru": "Указывает, является ли статья спонсированным контентом"
+    },
+    "code": "is_sponsored",
+    "is_locked": false,
+    "type": "bool",
+    "meta": null,
+    "display_order": 14,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "7c8d9e0f-1a2b-3456-789a-bcdef0123456",
+    "name": {
+      "en": "Read Time",
+      "th": "เวลาอ่าน",
+      "ru": "Время чтения"
+    },
+    "description": {
+      "en": "Estimated reading time in minutes",
+      "th": "เวลาอ่านโดยประมาณเป็นนาที",
+      "ru": "Примерное время чтения в минутах"
+    },
+    "code": "read_time",
+    "is_locked": false,
+    "type": "number",
+    "meta": {
+      "type": "number",
+      "integer": true,
+      "min": 1,
+      "max": 60
+    },
+    "display_order": 15,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  }
+]

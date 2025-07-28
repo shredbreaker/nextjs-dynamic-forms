@@ -16,15 +16,27 @@ import { useCMSTranslations } from "@cms/i18n/use-cms-translation.hooks";
 import { useLocalization } from "./locale.context";
 import { getFlagComponent } from "./localized-flag";
 
-export default function LocaleSwitcher({ variant = "icon" }: { variant?: "default" | "icon" }) {
+export default function LocaleSwitcher({
+  variant = "icon",
+  onSwitch,
+}: {
+  variant?: "default" | "icon";
+  onSwitch?: (locale: string) => void;
+}) {
   return (
     <ClientOnly>
-      <LocaleSwitcherInner variant={variant} />
+      <LocaleSwitcherInner variant={variant} onSwitch={onSwitch} />
     </ClientOnly>
   );
 }
 
-function LocaleSwitcherInner({ variant }: { variant: "default" | "icon" }) {
+function LocaleSwitcherInner({
+  variant,
+  onSwitch,
+}: {
+  variant: "default" | "icon";
+  onSwitch?: (locale: string) => void;
+}) {
   const { locales: contextLocales, switchLocale } = useLocalization();
   const currentLocale = useLocale();
   const { t } = useCMSTranslations();
@@ -71,7 +83,10 @@ function LocaleSwitcherInner({ variant }: { variant: "default" | "icon" }) {
             return (
               <DropdownMenuItem
                 key={locale}
-                onClick={() => switchLocale(locale)}
+                onClick={() => {
+                  switchLocale(locale);
+                  onSwitch?.(locale);
+                }}
                 className="flex items-center justify-between"
               >
                 <span className="flex items-center gap-2 capitalize">

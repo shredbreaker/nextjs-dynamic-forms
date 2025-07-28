@@ -1,0 +1,491 @@
+[
+  {
+    "id": "1a2b3c4d-5e6f-7890-abcd-ef1234567890",
+    "name": {
+      "en": "Show Title",
+      "th": "ชื่อรายการ",
+      "ru": "Название шоу"
+    },
+    "description": {
+      "en": "The title of the show or series",
+      "th": "ชื่อของรายการหรือซีรีส์",
+      "ru": "Название шоу или сериала"
+    },
+    "code": "show_title",
+    "is_locked": true,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": false,
+      "max": 100
+    },
+    "display_order": 1,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "2b3c4d5e-6f7a-8901-bcde-f23456789abc",
+    "name": {
+      "en": "Show Description",
+      "th": "คำอธิบายรายการ",
+      "ru": "Описание шоу"
+    },
+    "description": {
+      "en": "Detailed description of the show",
+      "th": "คำอธิบายรายละเอียดของรายการ",
+      "ru": "Подробное описание шоу"
+    },
+    "code": "show_description",
+    "is_locked": false,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": true,
+      "max": 1000
+    },
+    "display_order": 2,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "3c4d5e6f-7a8b-9012-def3-456789abcdef",
+    "name": {
+      "en": "Category",
+      "th": "หมวดหมู่",
+      "ru": "Категория"
+    },
+    "description": {
+      "en": "Category or genre of the show (e.g., Drama, Comedy)",
+      "th": "หมวดหมู่หรือประเภทของรายการ (เช่น ดราม่า, ตลก)",
+      "ru": "Категория или жанр шоу (например, драма, комедия)"
+    },
+    "code": "category",
+    "is_locked": true,
+    "type": "option",
+    "meta": {
+      "type": "option",
+      "multi": true,
+      "sorting": "alphabet"
+    },
+    "options": [
+      {
+        "option_id": "4d5e6f7a-8b9c-0123-ef45-6789abcdef01",
+        "property_id": "3c4d5e6f-7a8b-9012-def3-456789abcdef",
+        "name": {
+          "en": "Drama",
+          "th": "ดราม่า",
+          "ru": "Драма"
+        },
+        "display_order": 1,
+        "code": "drama",
+        "is_new": false
+      },
+      {
+        "option_id": "5e6f7a8b-9c0d-1234-f567-89abcdef0123",
+        "property_id": "3c4d5e6f-7a8b-9012-def3-456789abcdef",
+        "name": {
+          "en": "Comedy",
+          "th": "ตลก",
+          "ru": "Комедия"
+        },
+        "display_order": 2,
+        "code": "comedy",
+        "is_new": false
+      },
+      {
+        "option_id": "6f7a8b9c-0d1e-2345-6789-abcdef012345",
+        "property_id": "3c4d5e6f-7a8b-9012-def3-456789abcdef",
+        "name": {
+          "en": "Action",
+          "th": "แอคชั่น",
+          "ru": "Экшен"
+        },
+        "display_order": 3,
+        "code": "action",
+        "is_new": false
+      }
+    ],
+    "display_order": 3,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "7a8b9c0d-1e2f-3456-789a-bcdef0123456",
+    "name": {
+      "en": "Episode Title",
+      "th": "ชื่อตอน",
+      "ru": "Название эпизода"
+    },
+    "description": {
+      "en": "Title of the individual episode",
+      "th": "ชื่อของตอนแต่ละตอน",
+      "ru": "Название отдельного эпизода"
+    },
+    "code": "episode_title",
+    "is_locked": true,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": false,
+      "max": 100
+    },
+    "display_order": 4,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "8b9c0d1e-2f3a-4567-89ab-cdef01234567",
+    "name": {
+      "en": "Episode Number",
+      "th": "หมายเลขตอน",
+      "ru": "Номер эпизода"
+    },
+    "description": {
+      "en": "Episode number within the season",
+      "th": "หมายเลขตอนภายในฤดูกาล",
+      "ru": "Номер эпизода в сезоне"
+    },
+    "code": "episode_number",
+    "is_locked": true,
+    "type": "number",
+    "meta": {
+      "type": "number",
+      "integer": true,
+      "min": 1,
+      "max": 100
+    },
+    "display_order": 5,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "9c0d1e2f-3a4b-5678-9abc-def012345678",
+    "name": {
+      "en": "Season Number",
+      "th": "หมายเลขฤดูกาล",
+      "ru": "Номер сезона"
+    },
+    "description": {
+      "en": "Season number of the show",
+      "th": "หมายเลขฤดูกาลของรายการ",
+      "ru": "Номер сезона шоу"
+    },
+    "code": "season_number",
+    "is_locked": true,
+    "type": "number",
+    "meta": {
+      "type": "number",
+      "integer": true,
+      "min": 1,
+      "max": 50
+    },
+    "display_order": 6,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "0d1e2f3a-4b5c-6789-abcd-ef123456789a",
+    "name": {
+      "en": "Video URL",
+      "th": "URL วิดีโอ",
+      "ru": "URL видео"
+    },
+    "description": {
+      "en": "URL to the video file for the episode",
+      "th": "URL ไปยังไฟล์วิดีโอของตอน",
+      "ru": "URL к видеофайлу эпизода"
+    },
+    "code": "video_url",
+    "is_locked": true,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": false,
+      "max": 1000
+    },
+    "display_order": 7,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "1e2f3a4b-5c6d-7890-bcde-f23456789abc",
+    "name": {
+      "en": "Preview Image URL",
+      "th": "URL รูปภาพตัวอย่าง",
+      "ru": "URL изображения для предпросмотра"
+    },
+    "description": {
+      "en": "URL to the preview image or thumbnail for the episode",
+      "th": "URL ไปยังรูปภาพตัวอย่างหรือภาพย่อของตอน",
+      "ru": "URL к изображению для предпросмотра или миниатюре эпизода"
+    },
+    "code": "preview_image",
+    "is_locked": false,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": false,
+      "max": 1000
+    },
+    "display_order": 8,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "2f3a4b5c-6d7e-8901-cdef-3456789abcde",
+    "name": {
+      "en": "Age Restriction",
+      "th": "ข้อจำกัดอายุ",
+      "ru": "Возрастное ограничение"
+    },
+    "description": {
+      "en": "Minimum age requirement for viewers",
+      "th": "ข้อกำหนดอายุขั้นต่ำสำหรับผู้ชม",
+      "ru": "Минимальный возраст для зрителей"
+    },
+    "code": "age_restriction",
+    "is_locked": false,
+    "type": "number",
+    "meta": {
+      "type": "number",
+      "integer": true,
+      "min": 0,
+      "max": 18
+    },
+    "display_order": 9,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "3a4b5c6d-7e8f-9012-def3-456789abcdef",
+    "name": {
+      "en": "Region Lock",
+      "th": "การจำกัดภูมิภาค",
+      "ru": "Региональная блокировка"
+    },
+    "description": {
+      "en": "Regions where the content is available",
+      "th": "ภูมิภาคที่เนื้อหานี้สามารถเข้าถึงได้",
+      "ru": "Регионы, где контент доступен"
+    },
+    "code": "region_lock",
+    "is_locked": false,
+    "type": "option",
+    "meta": {
+      "type": "option",
+      "multi": true,
+      "sorting": "alphabet"
+    },
+    "options": [
+      {
+        "option_id": "4b5c6d7e-8f9a-0123-ef45-6789abcdef01",
+        "property_id": "3a4b5c6d-7e8 Jonny-5c6d7e-8f9a-0123-ef45-6789abcdef",
+        "name": {
+          "en": "North America",
+          "th": "อเมริกาเหนือ",
+          "ru": "Северная Америка"
+        },
+        "display_order": 1,
+        "code": "north_america",
+        "is_new": false
+      },
+      {
+        "option_id": "5c6d7e8f-9a0b-1234-f567-89abcdef0123",
+        "property_id": "3a4b5c6d-7e8f-9012-def3-456789abcdef",
+        "name": {
+          "en": "Europe",
+          "th": "ยุโรป",
+          "ru": "Европа"
+        },
+        "display_order": 2,
+        "code": "europe",
+        "is_new": false
+      },
+      {
+        "option_id": "6d7e8f9a-0b1c-2345-6789-abcdef012345",
+        "property_id": "3a4b5c6d-7e8f-9012-def3-456789abcdef",
+        "name": {
+          "en": "Asia",
+          "th": "เอเชีย",
+          "ru": "Азия"
+        },
+        "display_order": 3,
+        "code": "asia",
+        "is_new": false
+      }
+    ],
+    "display_order": 10,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "7e8f9a0b-1c2d-3456-789a-bcdef0123456",
+    "name": {
+      "en": "Content Rating",
+      "th": "การจัดเรตเนื้อหา",
+      "ru": "Рейтинг контента"
+    },
+    "description": {
+      "en": "Content rating for the show or episode",
+      "th": "การจัดเรตเนื้อหาสำหรับรายการหรือตอน",
+      "ru": "Рейтинг контента для шоу или эпизода"
+    },
+    "code": "content_rating",
+    "is_locked": false,
+    "type": "option",
+    "meta": {
+      "type": "option",
+      "multi": false,
+      "sorting": "manual"
+    },
+    "options": [
+      {
+        "option_id": "8f9a0b1c-2d3e-4567-89ab-cdef01234567",
+        "property_id": "7e8f9a0b-1c2d-3456-789a-bcdef0123456",
+        "name": {
+          "en": "G",
+          "th": "ทั่วไป",
+          "ru": "G"
+        },
+        "display_order": 1,
+        "code": "g",
+        "is_new": false
+      },
+      {
+        "option_id": "9a0b1c2d-3e4f-5678-9abc-def123456789",
+        "property_id": "7e8f9a0b-1c2d-3456-789a-bcdef0123456",
+        "name": {
+          "en": "PG",
+          "th": "แนะนำสำหรับเด็ก",
+          "ru": "PG"
+        },
+        "display_order": 2,
+        "code": "pg",
+        "is_new": false
+      },
+      {
+        "option_id": "0b1c2d3e-4f5a-6789-abcd-ef23456789ab",
+        "property_id": "7e8f9a0b-1c2d-3456-789a-bcdef0123456",
+        "name": {
+          "en": "R",
+          "th": "จำกัด",
+          "ru": "R"
+        },
+        "display_order": 3,
+        "code": "r",
+        "is_new": false
+      }
+    ],
+    "display_order": 11,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "1c2d3e4f-5a6b-7890-bcde-f3456789abcd",
+    "name": {
+      "en": "Release Date",
+      "th": "วันที่เผยแพร่",
+      "ru": "Дата выпуска"
+    },
+    "description": {
+      "en": "Release date of the show or episode",
+      "th": "วันที่เผยแพร่ของรายการหรือตอน",
+      "ru": "Дата выпуска шоу или эпизода"
+    },
+    "code": "release_date",
+    "is_locked": true,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": false,
+      "max": 10
+    },
+    "display_order": 12,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "2d3e4f5a-6b7c-8901-cdef-456789abcdef",
+    "name": {
+      "en": "Duration",
+      "th": "ระยะเวลา",
+      "ru": "Продолжительность"
+    },
+    "description": {
+      "en": "Duration of the episode in minutes",
+      "th": "ระยะเวลาของตอนเป็นนาที",
+      "ru": "Продолжительность эпизода в минутах"
+    },
+    "code": "duration",
+    "is_locked": false,
+    "type": "number",
+    "meta": {
+      "type": "number",
+      "integer": true,
+      "min": 1,
+      "max": 300
+    },
+    "display_order": 13,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "3e4f5a6b-7c8d-9012-def3-56789abcdef0",
+    "name": {
+      "en": "Internal Notes",
+      "th": "บันทึกภายใน",
+      "ru": "Внутренние заметки"
+    },
+    "description": {
+      "en": "Internal notes for content managers",
+      "th": "บันทึกภายในสำหรับผู้จัดการเนื้อหา",
+      "ru": "Внутренние заметки для менеджеров контента"
+    },
+    "code": "internal_notes",
+    "is_locked": false,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": true,
+      "max": 2000
+    },
+    "display_order": 14,
+    "is_required": false,
+    "is_private": true,
+    "is_new": false
+  },
+  {
+    "id": "4f5a6b7c-8d9e-0123-ef45-6789abcdef01",
+    "name": {
+      "en": "Is Exclusive",
+      "th": "เป็นเอกสิทธิ์",
+      "ru": "Эксклюзив"
+    },
+    "description": {
+      "en": "Indicates if the content is exclusive to the platform",
+      "th": "ระบุว่าเนื้อหานี้เป็นเอกสิทธิ์สำหรับแพลตฟอร์มหรือไม่",
+      "ru": "Указывает, является ли контент эксклюзивным для платформы"
+    },
+    "code": "is_exclusive",
+    "is_locked": false,
+    "type": "bool",
+    "meta": null,
+    "display_order": 15,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  }
+]

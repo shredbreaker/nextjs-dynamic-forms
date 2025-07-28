@@ -33,8 +33,12 @@ import { ThemeSwitcher } from "@shared-ui/components/theme/theme-switcher";
 import LocaleSwitcher from "@shared-ui/i18n/locale-switcher";
 import { DomainNameInput } from "@cms/modules/domain-editor/features/domain-config";
 import { useDebugRender } from "@cms/modules/domain-editor/hooks";
+import { CanvasStoreHydrated, useLayoutStore } from "@cms/modules/domain-editor/stores";
 import { DomainStoreHydrated } from "@cms/modules/domain-editor/stores/domain-store/domain.store.hooks";
+import { CanvasToolbar } from "@cms/modules/domain-editor/toolbar/canvas-toolbar";
+import { LanguageSelectionBar } from "@cms/modules/domain-editor/toolbar/language-selection-bar";
 import { ResetButton } from "./ui";
+
 /**
  * 🎛️ Domain Editor Header - Main header bar with controls
  *
@@ -59,10 +63,12 @@ import { ResetButton } from "./ui";
 export const DomainEditorHeader = memo(function DomainEditorHeader() {
   useDebugRender("DomainEditorHeader");
 
+  const { setCurrentTranslation } = useLayoutStore().getState();
+
   return (
     <div className="bg-muted">
       {/* Top Bar */}
-      <header className="flex h-18 w-full flex-row items-center justify-between gap-4 px-6">
+      <header className="flex w-full flex-row items-center justify-between px-6 pt-4">
         {/* Left Side */}
         <div className="flex flex-row justify-start space-x-2">
           <DomainStoreHydrated fallback={<div className="h-8 w-32 animate-pulse rounded" />}>
@@ -73,7 +79,7 @@ export const DomainEditorHeader = memo(function DomainEditorHeader() {
 
         {/* Right Side */}
         <div className="flex flex-row justify-end space-x-2">
-          <LocaleSwitcher />
+          <LocaleSwitcher onSwitch={(locale) => setCurrentTranslation(locale)} />
           <ThemeSwitcher />
         </div>
         {/* Left Side */}

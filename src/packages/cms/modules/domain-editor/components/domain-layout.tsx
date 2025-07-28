@@ -30,7 +30,6 @@
 
 import { memo } from "react";
 import { cn } from "@shared-ui/lib/utils";
-import { useIsMobile } from "@shared-ui/shadcn/hooks/use-mobile";
 import { PropertyCanvas } from "@cms/modules/domain-editor/canvas";
 import { PropertyNavigation } from "@cms/modules/domain-editor/features/property-tree";
 import { CanvasStoreHydrated, useCanvasStore } from "@cms/modules/domain-editor/stores/canvas-store/canvas.store.hooks";
@@ -39,6 +38,7 @@ import { CanvasToolbar } from "@cms/modules/domain-editor/toolbar/canvas-toolbar
 import { LanguageSelectionBar } from "@cms/modules/domain-editor/toolbar/language-selection-bar";
 import { CustomLocaleProvider } from "@cms/modules/localization/hooks";
 import { DomainEditorHeader } from "./domain-editor-header";
+import { AddPropertyButton } from "./ui";
 
 /**
  * 🏗️ Domain Layout - Main layout orchestrator
@@ -54,7 +54,6 @@ export const DomainLayout = memo(function DomainLayout() {
   const layoutStore = useLayoutStore();
   const showLanguageBar = layoutStore((state) => state.showLanguageBar);
   const showPropertiesTree = layoutStore((state) => state.showPropertiesTree);
-  const isMobile = useIsMobile();
 
   // Get resetKey to force re-render on canvas reset
   const canvasStore = useCanvasStore();
@@ -68,7 +67,8 @@ export const DomainLayout = memo(function DomainLayout() {
           <DomainEditorHeader />
         </LayoutStoreHydrated>
       </div>
-      <div className="bg-muted flex flex-1 overflow-hidden overflow-x-auto sm:px-12">
+
+      <div className="bg-muted flex overflow-hidden sm:px-12">
         {showPropertiesTree && (
           <div className="flex-none">
             <div className="scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent hover:scrollbar-thumb-gray-400 dark:scrollbar-thumb-gray-600 dark:hover:scrollbar-thumb-gray-500 mx-3 my-3 h-[calc(100%-1.5rem)] overflow-y-auto">
@@ -80,27 +80,40 @@ export const DomainLayout = memo(function DomainLayout() {
             </div>
           </div>
         )}
-        <div className="flex flex-1 flex-col space-y-2">
-          <div className="z-30 flex justify-center bg-transparent">
-            <CanvasStoreHydrated fallback={<div className="h-8 w-48 animate-pulse rounded bg-gray-200" />}>
-              <div className={cn("flex", isMobile ? "" : "absolute top-3 left-1/2 -translate-x-1/2")}>
-                <CanvasToolbar />
-                {showLanguageBar && (
-                  <div className="absolute top-10 left-1/2 z-20 w-full -translate-x-1/2">
-                    <LanguageSelectionBar />
-                  </div>
-                )}
+
+        <div className="flex flex-col space-y-2">
+          <div className={cn("flex h-full flex-col")}>
+            <div className={cn("relative z-30 flex justify-center bg-transparent pb-4", showLanguageBar && "pb-10")}>
+              <CanvasStoreHydrated fallback={<div className="h-8 w-48 animate-pulse" />}>
+                {/* <div className={cn("flex", isMobile ? "" : "absolute top-3 left-1/2 -translate-x-1/2")}> */}
+                <div>
+                  <CanvasToolbar />
+                  {showLanguageBar && (
+                    <div className="absolute bottom-0 left-1/2 z-20 w-full -translate-x-1/2">
+                      <LanguageSelectionBar />
+                    </div>
+                  )}
+                </div>
+              </CanvasStoreHydrated>
+            </div>
+
+            <div className="flex-1 overflow-y-auto">
+              <div className="m-0 px-12">
+                <CanvasStoreHydrated fallback={<div className="animate-pulse p-8 text-center"></div>}>
+                  <LayoutStoreHydrated>
+                    <CustomLocaleProvider customLocale={customTranslation}>
+                      <div className="">
+                        <PropertyCanvas />
+                      </div>
+                    </CustomLocaleProvider>
+                  </LayoutStoreHydrated>
+                </CanvasStoreHydrated>
               </div>
-            </CanvasStoreHydrated>
-          </div>
-          <div className={cn("h-full", showLanguageBar && "pt-1")}>
-            <CanvasStoreHydrated fallback={<div className="animate-pulse p-8 text-center"></div>}>
-              <LayoutStoreHydrated>
-                <CustomLocaleProvider customLocale={customTranslation}>
-                  <PropertyCanvas />
-                </CustomLocaleProvider>
-              </LayoutStoreHydrated>
-            </CanvasStoreHydrated>
+            </div>
+
+            <div className={cn("flex w-full items-center justify-center py-2")}>
+              <AddPropertyButton />
+            </div>
           </div>
         </div>
       </div>
