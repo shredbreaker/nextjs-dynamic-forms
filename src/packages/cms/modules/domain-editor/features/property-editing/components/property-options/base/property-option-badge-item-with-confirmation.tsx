@@ -57,9 +57,10 @@ import { Input } from "@shared-ui/shadcn/components/ui/input";
 import { useCMSTranslations } from "@cms/i18n/use-cms-translation.hooks";
 import { usePropertyOptionCRUD, usePropertyOptionInput } from "@cms/modules/domain-editor/features/property-editing";
 import { useDebugRender } from "@cms/modules/domain-editor/hooks";
+import { useCanvasStore } from "@cms/modules/domain-editor/stores/canvas-store";
 import { useLayoutStore } from "@cms/modules/domain-editor/stores/layout-store";
+import { getAvailableLocalizedText } from "@cms/modules/localization/utils/get-available-localized-text";
 import { PropertyOption } from "@cms/modules/properties/property.types";
-
 /**
  * 🏷️ Property Option Badge Item with Confirmation
  *
@@ -104,6 +105,22 @@ export const PropertyOptionBadgeItemWithConfirmation = memo(function PropertyOpt
   const { updateOptionName } = usePropertyOptionCRUD(propertyId);
   const layoutStore = useLayoutStore();
   const currentTranslation = layoutStore((state) => state.currentTranslation);
+  const currentLocale = layoutStore((state) => state.currentLocale);
+  const canvasStore = useCanvasStore();
+
+  const placeholder =
+    canvasStore(
+      useCallback(
+        (state) => {
+          if (currentTranslation === currentLocale) {
+            return null;
+          }
+          const option = state.propertyOptions[propertyId]?.[optionId];
+          return getAvailableLocalizedText(option?.name, currentTranslation || currentLocale);
+        },
+        [currentTranslation, currentLocale, propertyId, optionId],
+      ),
+    ) || "";
 
   const getValue = useCallback(
     (option: PropertyOption | undefined, locale?: string) => {
@@ -146,6 +163,7 @@ export const PropertyOptionBadgeItemWithConfirmation = memo(function PropertyOpt
         ref={inputRef}
         value={defaultValue}
         onChange={onChange}
+        placeholder={placeholder}
         className="h-6 min-w-0 flex-1 truncate border-0 bg-transparent p-0 text-sm shadow-none focus-visible:ring-0 dark:bg-transparent"
         data-testid={`property-option-badge-input-${optionId}`}
       />

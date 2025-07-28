@@ -5,6 +5,7 @@ import { usePropertyOptionCRUD, usePropertyOptionInput } from "@cms/modules/doma
 import { useDebugRender } from "@cms/modules/domain-editor/hooks";
 import { useCanvasStore } from "@cms/modules/domain-editor/stores/canvas-store";
 import { useLayoutStore } from "@cms/modules/domain-editor/stores/layout-store";
+import { getAvailableLocalizedText } from "@cms/modules/localization/utils/get-available-localized-text";
 import { PropertyOption } from "@cms/modules/properties/property.types";
 
 export const PropertyOptionNameInput = memo(function PropertyOptionNameInput({
@@ -45,26 +46,19 @@ export const PropertyOptionNameInput = memo(function PropertyOptionNameInput({
   });
 
   // Optimized: only get main name if needed, avoid expensive subscription when not needed
-  const mainName = canvasStore(
-    useCallback(
-      (state) => {
-        if (currentTranslation === currentLocale) {
-          return null;
-        }
-        const option = state.propertyOptions[propertyId]?.[optionId];
-        return option?.name?.[currentLocale] || "";
-      },
-      [currentTranslation, currentLocale, propertyId, optionId],
-    ),
-  );
-
-  const placeholder = useMemo(() => {
-    if (mainName) {
-      return `${t("property.option.name")} / ${mainName}`;
-    } else {
-      return t("property.option.name");
-    }
-  }, [mainName, t]);
+  const placeholder =
+    canvasStore(
+      useCallback(
+        (state) => {
+          if (currentTranslation === currentLocale) {
+            return null;
+          }
+          const option = state.propertyOptions[propertyId]?.[optionId];
+          return getAvailableLocalizedText(option?.name, currentTranslation || currentLocale);
+        },
+        [currentTranslation, currentLocale, propertyId, optionId],
+      ),
+    ) || "";
 
   return (
     <div className="relative flex w-full" key={currentTranslation}>
