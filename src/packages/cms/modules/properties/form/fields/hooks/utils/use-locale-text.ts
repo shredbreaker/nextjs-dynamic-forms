@@ -2,8 +2,10 @@
 
 import { useLocale } from "next-intl";
 import { useMemo, useCallback, useRef } from "react";
+import { LocalizedText } from "@cms-data/modules/localization/localization.types";
 import { useCMSTranslations } from "@cms/i18n/use-cms-translation.hooks";
 import { useCustomLocale } from "@cms/modules/localization/hooks/use-custom-locale";
+import { getAvailableLocalizedText } from "@cms/modules/localization/utils/get-available-localized-text";
 import { useProperty, usePropertyId, usePropertyStore } from "@cms/modules/properties/form/hooks";
 import type { FormProperty } from "@cms/modules/properties/form/types";
 import { generateInputId } from "@cms/modules/shared/form/utils/input-id.utils";
@@ -73,7 +75,6 @@ function usePropertyLocaleTextInputBase(
   onChange: (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
   targetLocale: string;
 } {
-  const { t } = useCMSTranslations();
   const currentLocale = useLocale();
   const customLocale = useCustomLocale();
   const targetLocale = forceLocale || customLocale || currentLocale;
@@ -87,11 +88,11 @@ function usePropertyLocaleTextInputBase(
     return generateInputId("property", propertyId, field.toString(), variant, targetLocale);
   }, [propertyId, field, variant, targetLocale]);
 
-  // Placeholder text using translations
-  const placeholder = useMemo(() => {
-    const fieldTranslationKey = `property.${field.toString()}.placeholder`;
-    return t(fieldTranslationKey);
-  }, [t, field]);
+  const placeholder =
+    useProperty((property) => {
+      const fieldValue = property[field] as LocalizedText | undefined;
+      return getAvailableLocalizedText(fieldValue, targetLocale);
+    }) || "";
 
   // Change handler with translation update
   const onChange = useCallback(

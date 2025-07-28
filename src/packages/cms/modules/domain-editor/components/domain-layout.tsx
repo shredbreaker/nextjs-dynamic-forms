@@ -83,13 +83,15 @@ export const DomainLayout = memo(function DomainLayout() {
 
         <div className="flex flex-col space-y-2">
           <div className={cn("flex h-full flex-col")}>
-            <div className={cn("relative z-30 flex justify-center bg-transparent pb-4", showLanguageBar && "pb-10")}>
+            <div
+              className={cn("relative z-30 flex justify-center bg-transparent pt-2 pb-4", showLanguageBar && "pb-10")}
+            >
               <CanvasStoreHydrated fallback={<div className="h-8 w-48 animate-pulse" />}>
                 {/* <div className={cn("flex", isMobile ? "" : "absolute top-3 left-1/2 -translate-x-1/2")}> */}
                 <div>
                   <CanvasToolbar />
                   {showLanguageBar && (
-                    <div className="absolute bottom-0 left-1/2 z-20 w-full -translate-x-1/2">
+                    <div className="bottom- absolute left-1/2 z-20 w-full -translate-x-1/2">
                       <LanguageSelectionBar />
                     </div>
                   )}
