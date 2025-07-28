@@ -1,0 +1,507 @@
+[
+  {
+    "id": "1a2b3c4d-5e6f-7890-abcd-ef1234567890",
+    "name": {
+      "en": "Property Title",
+      "th": "ชื่ออสังหาริมทรัพย์",
+      "ru": "Название недвижимости"
+    },
+    "description": {
+      "en": "The title or name of the property listing",
+      "th": "ชื่อหรือหัวข้อของรายการอสังหาริมทรัพย์",
+      "ru": "Название или заголовок объекта недвижимости"
+    },
+    "code": "property_title",
+    "is_locked": true,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": false,
+      "max": 100
+    },
+    "display_order": 1,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "2b3c4d5e-6f7a-8901-bcde-f23456789abc",
+    "name": {
+      "en": "Listing Type",
+      "th": "ประเภทการลงประกาศ",
+      "ru": "Тип листинга"
+    },
+    "description": {
+      "en": "Whether the property is for rent or sale",
+      "th": "อสังหาริมทรัพย์สำหรับเช่าหรือขาย",
+      "ru": "Недвижимость для аренды или продажи"
+    },
+    "code": "listing_type",
+    "is_locked": true,
+    "type": "option",
+    "meta": {
+      "type": "option",
+      "multi": false,
+      "sorting": "manual"
+    },
+    "options": [
+      {
+        "option_id": "3c4d5e6f-7a8b-9012-def3-456789abcdef",
+        "property_id": "2b3c4d5e-6f7a-8901-bcde-f23456789abc",
+        "name": {
+          "en": "For Sale",
+          "th": "สำหรับขาย",
+          "ru": "На продажу"
+        },
+        "display_order": 1,
+        "code": "sale",
+        "is_new": false
+      },
+      {
+        "option_id": "4d5e6f7a-8b9c-0123-ef45-6789abcdef01",
+        "property_id": "2b3c4d5e-6f7a-8901-bcde-f23456789abc",
+        "name": {
+          "en": "For Rent",
+          "th": "สำหรับเช่า",
+          "ru": "В аренду"
+        },
+        "display_order": 2,
+        "code": "rent",
+        "is_new": false
+      }
+    ],
+    "display_order": 2,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "5e6f7a8b-9c0d-1234-f567-89abcdef0123",
+    "name": {
+      "en": "Price",
+      "th": "ราคา",
+      "ru": "Цена"
+    },
+    "description": {
+      "en": "Price of the property for sale or rent",
+      "th": "ราคาของอสังหาริมทรัพย์สำหรับขายหรือเช่า",
+      "ru": "Стоимость недвижимости для продажи или аренды"
+    },
+    "code": "price",
+    "is_locked": true,
+    "type": "number",
+    "meta": {
+      "type": "number",
+      "integer": false,
+      "min": 0,
+      "max": 100000000
+    },
+    "display_order": 3,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "6f7a8b9c-0d1e-2345-6789-abcdef012345",
+    "name": {
+      "en": "Location",
+      "th": "ที่ตั้ง",
+      "ru": "Местоположение"
+    },
+    "description": {
+      "en": "Address or area of the property",
+      "th": "ที่อยู่หรือพื้นที่ของอสังหาริมทรัพย์",
+      "ru": "Адрес или район недвижимости"
+    },
+    "code": "location",
+    "is_locked": true,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": true,
+      "max": 500
+    },
+    "display_order": 4,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "7a8b9c0d-1e2f-3456-789a-bcdef0123456",
+    "name": {
+      "en": "Property Type",
+      "th": "ประเภทอสังหาริมทรัพย์",
+      "ru": "Тип недвижимости"
+    },
+    "description": {
+      "en": "Type of property (e.g., house, apartment, land)",
+      "th": "ประเภทของอสังหาริมทรัพย์ (เช่น บ้าน, คอนโด, ที่ดิน)",
+      "ru": "Тип недвижимости (например, дом, квартира, участок)"
+    },
+    "code": "property_type",
+    "is_locked": true,
+    "type": "option",
+    "meta": {
+      "type": "option",
+      "multi": false,
+      "sorting": "alphabet"
+    },
+    "options": [
+      {
+        "option_id": "8b9c0d1e-2f3a-4567-89ab-cdef01234567",
+        "property_id": "7a8b9c0d-1e2f-3456-789a-bcdef0123456",
+        "name": {
+          "en": "House",
+          "th": "บ้าน",
+          "ru": "Дом"
+        },
+        "display_order": 1,
+        "code": "house",
+        "is_new": false
+      },
+      {
+        "option_id": "9c0d1e2f-3a4b-5678-9abc-def012345678",
+        "property_id": "7a8b9c0d-1e2f-3456-789a-bcdef0123456",
+        "name": {
+          "en": "Apartment",
+          "th": "คอนโด",
+          "ru": "Квартира"
+        },
+        "display_order": 2,
+        "code": "apartment",
+        "is_new": false
+      },
+      {
+        "option_id": "0d1e2f3a-4b5c-6789-abcd-ef123456789a",
+        "property_id": "7a8b9c0d-1e2f-3456-789a-bcdef0123456",
+        "name": {
+          "en": "Land",
+          "th": "ที่ดิน",
+          "ru": "Участок"
+        },
+        "display_order": 3,
+        "code": "land",
+        "is_new": false
+      }
+    ],
+    "display_order": 5,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "1e2f3a4b-5c6d-7890-bcde-f23456789abc",
+    "name": {
+      "en": "Floor Number",
+      "th": "ชั้นที่",
+      "ru": "Номер этажа"
+    },
+    "description": {
+      "en": "Floor number for apartments",
+      "th": "ชั้นของคอนโด",
+      "ru": "Номер этажа для квартир"
+    },
+    "code": "floor_number",
+    "is_locked": false,
+    "type": "number",
+    "meta": {
+      "type": "number",
+      "integer": true,
+      "min": 1,
+      "max": 100
+    },
+    "display_order": 6,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "2f3a4b5c-6d7e-8901-cdef-3456789abcde",
+    "name": {
+      "en": "Bedrooms",
+      "th": "จำนวนห้องนอน",
+      "ru": "Количество спален"
+    },
+    "description": {
+      "en": "Number of bedrooms in the property",
+      "th": "จำนวนห้องนอนในอสังหาริมทรัพย์",
+      "ru": "Количество спален в недвижимости"
+    },
+    "code": "bedrooms",
+    "is_locked": true,
+    "type": "number",
+    "meta": {
+      "type": "number",
+      "integer": true,
+      "min": 0,
+      "max": 20
+    },
+    "display_order": 7,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "3a4b5c6d-7e8f-9012-def3-456789abcdef",
+    "name": {
+      "en": "Bathrooms",
+      "th": "จำนวนห้องน้ำ",
+      "ru": "Количество ванных комнат"
+    },
+    "description": {
+      "en": "Number of bathrooms in the property",
+      "th": "จำนวนห้องน้ำในอสังหาริมทรัพย์",
+      "ru": "Количество ванных комнат в недвижимости"
+    },
+    "code": "bathrooms",
+    "is_locked": true,
+    "type": "number",
+    "meta": {
+      "type": "number",
+      "integer": true,
+      "min": 0,
+      "max": 20
+    },
+    "display_order": 8,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "4b5c6d7e-8f9a-0123-ef45-6789abcdef01",
+    "name": {
+      "en": "Amenities",
+      "th": "สิ่งอำนวยความสะดวก",
+      "ru": "Удобства"
+    },
+    "description": {
+      "en": "Available amenities in the property",
+      "th": "สิ่งอำนวยความสะดวกที่มีในอสังหาริมทรัพย์",
+      "ru": "Доступные удобства в недвижимости"
+    },
+    "code": "amenities",
+    "is_locked": false,
+    "type": "option",
+    "meta": {
+      "type": "option",
+      "multi": true,
+      "sorting": "alphabet"
+    },
+    "options": [
+      {
+        "option_id": "5c6d7e8f-9a0b-1234-f567-89abcdef0123",
+        "property_id": "4b5c6d7e-8f9a-0123-ef45-6789abcdef01",
+        "name": {
+          "en": "Swimming Pool",
+          "th": "สระว่ายน้ำ",
+          "ru": "Бассейн"
+        },
+        "display_order": 1,
+        "code": "pool",
+        "is_new": false
+      },
+      {
+        "option_id": "6d7e8f9a-0b1c-2345-6789-abcdef012345",
+        "property_id": "4b5c6d7e-8f9a-0123-ef45-6789abcdef01",
+        "name": {
+          "en": "Gym",
+          "th": "ยิม",
+          "ru": "Тренажерный зал"
+        },
+        "display_order": 2,
+        "code": "gym",
+        "is_new": false
+      },
+      {
+        "option_id": "7e8f9a0b-1c2d-3456-789a-bcdef0123456",
+        "property_id": "4b5c6d7e-8f9a-0123-ef45-6789abcdef01",
+        "name": {
+          "en": "Parking",
+          "th": "ที่จอดรถ",
+          "ru": "Парковка"
+        },
+        "display_order": 3,
+        "code": "parking",
+        "is_new": false
+      }
+    ],
+    "display_order": 9,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "8f9a0b1c-2d3e-4567-89ab-cdef01234567",
+    "name": {
+      "en": "Media Gallery",
+      "th": "แกลเลอรีสื่อ",
+      "ru": "Медиа-галерея"
+    },
+    "description": {
+      "en": "URLs or references to property images/videos",
+      "th": "URL หรือการอ้างอิงถึงรูปภาพ/วิดีโอของอสังหาริมทรัพย์",
+      "ru": "URL-адреса или ссылки на изображения/видео недвижимости"
+    },
+    "code": "media_gallery",
+    "is_locked": false,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": true,
+      "max": 2000
+    },
+    "display_order": 10,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "9a0b1c2d-3e4f-5678-9abc-def123456789",
+    "name": {
+      "en": "Area Size",
+      "th": "ขนาดพื้นที่",
+      "ru": "Площадь"
+    },
+    "description": {
+      "en": "Size of the property in square meters",
+      "th": "ขนาดของอสังหาริมทรัพย์เป็นตารางเมตร",
+      "ru": "Площадь недвижимости в квадратных метрах"
+    },
+    "code": "area_size",
+    "is_locked": true,
+    "type": "size",
+    "meta": {
+      "type": "number",
+      "integer": false,
+      "min": 0,
+      "max": 100000
+    },
+    "display_order": 11,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "0b1c2d3e-4f5a-6789-abcd-ef23456789ab",
+    "name": {
+      "en": "Ownership Type",
+      "th": "ประเภทการเป็นเจ้าของ",
+      "ru": "Тип владения"
+    },
+    "description": {
+      "en": "Type of ownership (e.g., freehold, leasehold)",
+      "th": "ประเภทการเป็นเจ้าของ (เช่น ฟรีโฮลด์, ลีสโฮลด์)",
+      "ru": "Тип владения (например, полная собственность, аренда)"
+    },
+    "code": "ownership_type",
+    "is_locked": true,
+    "type": "option",
+    "meta": {
+      "type": "option",
+      "multi": false,
+      "sorting": "alphabet"
+    },
+    "options": [
+      {
+        "option_id": "1c2d3e4f-5a6b-7890-bcde-f3456789abcd",
+        "property_id": "0b1c2d3e-4f5a-6789-abcd-ef23456789ab",
+        "name": {
+          "en": "Freehold",
+          "th": "ฟรีโฮลด์",
+          "ru": "Полная собственность"
+        },
+        "display_order": 1,
+        "code": "freehold",
+        "is_new": false
+      },
+      {
+        "option_id": "2d3e4f5a-6b7c-8901-cdef-456789abcdef",
+        "property_id": "0b1c2d3e-4f5a-6789-abcd-ef23456789ab",
+        "name": {
+          "en": "Leasehold",
+          "th": "ลีสโฮลด์",
+          "ru": "Аренда"
+        },
+        "display_order": 2,
+        "code": "leasehold",
+        "is_new": false
+      }
+    ],
+    "display_order": 12,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "3e4f5a6b-7c8d-9012-def3-56789abcdef0",
+    "name": {
+      "en": "Agent Notes",
+      "th": "บันทึกของตัวแทน",
+      "ru": "Заметки агента"
+    },
+    "description": {
+      "en": "Internal notes for real estate agents",
+      "th": "บันทึกภายในสำหรับตัวแทนอสังหาริมทรัพย์",
+      "ru": "Внутренние заметки для агентов по недвижимости"
+    },
+    "code": "agent_notes",
+    "is_locked": false,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": true,
+      "max": 2000
+    },
+    "display_order": 13,
+    "is_required": false,
+    "is_private": true,
+    "is_new": false
+  },
+  {
+    "id": "4f5a6b7c-8d9e-0123-ef45-6789abcdef01",
+    "name": {
+      "en": "Divisible Sale",
+      "th": "การขายแบ่งแยก",
+      "ru": "Разделяемая продажа"
+    },
+    "description": {
+      "en": "Whether the land can be divided for sale",
+      "th": "ที่ดินสามารถแบ่งขายได้หรือไม่",
+      "ru": "Можно ли разделить участок для продажи"
+    },
+    "code": "divisible_sale",
+    "is_locked": false,
+    "type": "bool",
+    "meta": null,
+    "display_order": 14,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "5a6b7c8d-9e0f-1234-f567-89abcdef0123",
+    "name": {
+      "en": "Year Built",
+      "th": "ปีที่สร้าง",
+      "ru": "Год постройки"
+    },
+    "description": {
+      "en": "Year the property was constructed",
+      "th": "ปีที่อสังหาริมทรัพย์ถูกสร้าง",
+      "ru": "Год строительства недвижимости"
+    },
+    "code": "year_built",
+    "is_locked": false,
+    "type": "number",
+    "meta": {
+      "type": "number",
+      "integer": true,
+      "min": 1900,
+      "max": 2025
+    },
+    "display_order": 15,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  }
+]

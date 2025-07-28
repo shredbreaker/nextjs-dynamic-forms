@@ -1,0 +1,4 @@
+Hotel Room CMS
+Room types, seasonal pricing
+Facilities, room images
+Optional availability calendar integration

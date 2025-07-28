@@ -86,8 +86,8 @@ export default function PropertyCanvas() {
   }, []);
 
   return (
-    <div className="bg-muted flex h-full w-full flex-col justify-between space-y-2 pb-4">
-      <div className="okjustify-start flex flex-1 flex-col space-y-0 overflow-y-auto px-6">
+    <div className="bg-muted flex h-full w-full flex-col items-start justify-between space-y-2 pb-4">
+      <div className="flex flex-1 flex-col justify-start space-y-0 overflow-y-auto px-6">
         <PropertyEditorCardList />
       </div>
       <div className={cn("flex w-full items-center justify-center")}>

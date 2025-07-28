@@ -1,0 +1,453 @@
+[
+  {
+    "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "name": {
+      "en": "Event Name",
+      "th": "ชื่อกิจกรรม",
+      "ru": "Название мероприятия"
+    },
+    "description": {
+      "en": "The official name of the event",
+      "th": "ชื่ออย่างเป็นทางการของกิจกรรม",
+      "ru": "Официальное название мероприятия"
+    },
+    "code": "event_name",
+    "is_locked": true,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": false,
+      "max": 100
+    },
+    "display_order": 1,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "b2c3d4e5-f6a7-8901-bcde-f23456789abc",
+    "name": {
+      "en": "Event Date",
+      "th": "วันที่จัดงาน",
+      "ru": "Дата мероприятия"
+    },
+    "description": {
+      "en": "Date when the event will take place",
+      "th": "วันที่จัดงาน",
+      "ru": "Дата проведения мероприятия"
+    },
+    "code": "event_date",
+    "is_locked": true,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": false,
+      "max": 10
+    },
+    "display_order": 2,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "c3d4e5f6-a7b8-9012-cdef-3456789abcde",
+    "name": {
+      "en": "Event Type",
+      "th": "ประเภทกิจกรรม",
+      "ru": "Тип мероприятия"
+    },
+    "description": {
+      "en": "Type of the event (e.g., concert, party)",
+      "th": "ประเภทของกิจกรรม (เช่น คอนเสิร์ต, ปาร์ตี้)",
+      "ru": "Тип мероприятия (например, концерт, вечеринка)"
+    },
+    "code": "event_type",
+    "is_locked": true,
+    "type": "option",
+    "meta": {
+      "type": "option",
+      "multi": false,
+      "sorting": "alphabet"
+    },
+    "options": [
+      {
+        "option_id": "d4e5f6a7-b8c9-0123-def4-56789abcdef0",
+        "property_id": "c3d4e5f6-a7b8-9012-cdef-3456789abcde",
+        "name": {
+          "en": "Concert",
+          "th": "คอนเสิร์ต",
+          "ru": "Концерт"
+        },
+        "display_order": 1,
+        "code": "concert",
+        "is_new": false
+      },
+      {
+        "option_id": "e5f6a7b8-c9d0-1234-ef56-789abcdef012",
+        "property_id": "c3d4e5f6-a7b8-9012-cdef-3456789abcde",
+        "name": {
+          "en": "Party",
+          "th": "ปาร์ตี้",
+          "ru": "Вечеринка"
+        },
+        "display_order": 2,
+        "code": "party",
+        "is_new": false
+      }
+    ],
+    "display_order": 3,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "f6a7b8c9-d0e1-2345-f678-9abcdef01234",
+    "name": {
+      "en": "Venue Capacity",
+      "th": "ความจุสถานที่",
+      "ru": "Вместимость площадки"
+    },
+    "description": {
+      "en": "Maximum number of attendees",
+      "th": "จำนวนผู้เข้าร่วมสูงสุด",
+      "ru": "Максимальное количество участников"
+    },
+    "code": "venue_capacity",
+    "is_locked": true,
+    "type": "number",
+    "meta": {
+      "type": "number",
+      "integer": true,
+      "min": 1,
+      "max": 100000
+    },
+    "display_order": 4,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "a7b8c9d0-e1f2-3456-789a-bcde01234567",
+    "name": {
+      "en": "Ticket Price",
+      "th": "ราคาตั๋ว",
+      "ru": "Стоимость билета"
+    },
+    "description": {
+      "en": "Price per ticket in local currency",
+      "th": "ราคาตั๋วในสกุลเงินท้องถิ่น",
+      "ru": "Стоимость билета в местной валюте"
+    },
+    "code": "ticket_price",
+    "is_locked": true,
+    "type": "number",
+    "meta": {
+      "type": "number",
+      "integer": false,
+      "min": 0,
+      "max": 10000
+    },
+    "display_order": 5,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "b8c9d0e1-f2a3-4567-89ab-cdef12345678",
+    "name": {
+      "en": "Event Description",
+      "th": "คำอธิบายกิจกรรม",
+      "ru": "Описание мероприятия"
+    },
+    "description": {
+      "en": "Detailed description of the event",
+      "th": "คำอธิบายรายละเอียดของกิจกรรม",
+      "ru": "Подробное описание мероприятия"
+    },
+    "code": "event_description",
+    "is_locked": false,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": true,
+      "max": 1000
+    },
+    "display_order": 6,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "c9d0e1f2-a3b4-5678-9abc-def23456789a",
+    "name": {
+      "en": "Is VIP Available",
+      "th": "มี VIP หรือไม่",
+      "ru": "Доступен ли VIP"
+    },
+    "description": {
+      "en": "Indicates if VIP tickets are available",
+      "th": "ระบุว่ามีตั๋ว VIP หรือไม่",
+      "ru": "Указывает, доступны ли VIP-билеты"
+    },
+    "code": "is_vip",
+    "is_locked": false,
+    "type": "bool",
+    "meta": null,
+    "display_order": 7,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "d0e1f2a3-b4c5-6789-abcd-ef3456789abc",
+    "name": {
+      "en": "Organizer Notes",
+      "th": "หมายเหตุผู้จัดงาน",
+      "ru": "Заметки организатора"
+    },
+    "description": {
+      "en": "Internal notes for organizers",
+      "th": "หมายเหตุภายในสำหรับผู้จัดงาน",
+      "ru": "Внутренние заметки для организаторов"
+    },
+    "code": "organizer_notes",
+    "is_locked": false,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": true,
+      "max": 2000
+    },
+    "display_order": 8,
+    "is_required": false,
+    "is_private": true,
+    "is_new": false
+  },
+  {
+    "id": "e1f2a3b4-c5d6-7890-bcde-f456789abcde",
+    "name": {
+      "en": "Event Duration",
+      "th": "ระยะเวลากิจกรรม",
+      "ru": "Продолжительность мероприятия"
+    },
+    "description": {
+      "en": "Duration of the event in hours",
+      "th": "ระยะเวลาของกิจกรรมเป็นชั่วโมง",
+      "ru": "Продолжительность мероприятия в часах"
+    },
+    "code": "event_duration",
+    "is_locked": false,
+    "type": "number",
+    "meta": {
+      "type": "number",
+      "integer": false,
+      "min": 0.5,
+      "max": 24
+    },
+    "display_order": 9,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "f2a3b4c5-d6e7-8901-cdef-56789abcdef0",
+    "name": {
+      "en": "Age Restriction",
+      "th": "ข้อจำกัดอายุ",
+      "ru": "Возрастное ограничение"
+    },
+    "description": {
+      "en": "Minimum age requirement for attendees",
+      "th": "ข้อกำหนดอายุขั้นต่ำสำหรับผู้เข้าร่วม",
+      "ru": "Минимальный возраст для участников"
+    },
+    "code": "age_restriction",
+    "is_locked": false,
+    "type": "number",
+    "meta": {
+      "type": "number",
+      "integer": true,
+      "min": 0,
+      "max": 100
+    },
+    "display_order": 10,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "a3b4c5d6-e7f8-9012-def3-6789abcdef01",
+    "name": {
+      "en": "Event Status",
+      "th": "สถานะกิจกรรม",
+      "ru": "Статус мероприятия"
+    },
+    "description": {
+      "en": "Current status of the event",
+      "th": "สถานะปัจจุบันของกิจกรรม",
+      "ru": "Текущий статус мероприятия"
+    },
+    "code": "event_status",
+    "is_locked": true,
+    "type": "option",
+    "meta": {
+      "type": "option",
+      "multi": false,
+      "sorting": "manual"
+    },
+    "options": [
+      {
+        "option_id": "b4c5d6e7-f8a9-0123-ef45-789abcdef012",
+        "property_id": "a3b4c5d6-e7f8-9012-def3-6789abcdef01",
+        "name": {
+          "en": "Draft",
+          "th": "ร่าง",
+          "ru": "Черновик"
+        },
+        "display_order": 1,
+        "code": "draft",
+        "is_new": false
+      },
+      {
+        "option_id": "c5d6e7f8-a9b0-1234-f567-89abcdef0123",
+        "property_id": "a3b4c5d6-e7f8-9012-def3-6789abcdef01",
+        "name": {
+          "en": "Published",
+          "th": "เผยแพร่",
+          "ru": "Опубликовано"
+        },
+        "display_order": 2,
+        "code": "published",
+        "is_new": false
+      }
+    ],
+    "display_order": 11,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "b4c5d6e7-f8a9-0123-ef45-789abcdef012",
+    "name": {
+      "en": "Venue Size",
+      "th": "ขนาดสถานที่",
+      "ru": "Размер площадки"
+    },
+    "description": {
+      "en": "Size of the venue in square meters",
+      "th": "ขนาดของสถานที่เป็นตารางเมตร",
+      "ru": "Размер площадки в квадратных метрах"
+    },
+    "code": "venue_size",
+    "is_locked": false,
+    "type": "size",
+    "meta": {
+      "type": "number",
+      "integer": false,
+      "min": 0,
+      "max": 100000
+    },
+    "display_order": 12,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "c5d6e7f8-a9b0-1234-f567-89abcdef0123",
+    "name": {
+      "en": "Accessibility Features",
+      "th": "คุณสมบัติการเข้าถึง",
+      "ru": "Особенности доступности"
+    },
+    "description": {
+      "en": "Accessibility options available at the venue",
+      "th": "ตัวเลือกการเข้าถึงที่มีในสถานที่",
+      "ru": "Опции доступности, доступные на площадке"
+    },
+    "code": "accessibility",
+    "is_locked": false,
+    "type": "option",
+    "meta": {
+      "type": "option",
+      "multi": true,
+      "sorting": "alphabet"
+    },
+    "options": [
+      {
+        "option_id": "d6e7f8a9-b0c1-2345-6789-abcdef012345",
+        "property_id": "c5d6e7f8-a9b0-1234-f567-89abcdef0123",
+        "name": {
+          "en": "Wheelchair Access",
+          "th": "การเข้าถึงรถเข็น",
+          "ru": "Доступ для инвалидных колясок"
+        },
+        "display_order": 1,
+        "code": "wheelchair",
+        "is_new": false
+      },
+      {
+        "option_id": "e7f8a9b0-c1d2-3456-789a-bcdef0123456",
+        "property_id": "c5d6e7f8-a9b0-1234-f567-89abcdef0123",
+        "name": {
+          "en": "Sign Language",
+          "th": "ภาษามือ",
+          "ru": "Язык жестов"
+        },
+        "display_order": 2,
+        "code": "sign_language",
+        "is_new": false
+      }
+    ],
+    "display_order": 13,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "d6e7f8a9-b0c1-2345-6789-abcdef012345",
+    "name": {
+      "en": "Internal Budget",
+      "th": "งบประมาณภายใน",
+      "ru": "Внутренний бюджет"
+    },
+    "description": {
+      "en": "Internal budget allocation for the event",
+      "th": "การจัดสรรงบประมาณภายในสำหรับกิจกรรม",
+      "ru": "Внутреннее распределение бюджета на мероприятие"
+    },
+    "code": "internal_budget",
+    "is_locked": false,
+    "type": "number",
+    "meta": {
+      "type": "number",
+      "integer": false,
+      "min": 0,
+      "max": 1000000
+    },
+    "display_order": 14,
+    "is_required": false,
+    "is_private": true,
+    "is_new": false
+  },
+  {
+    "id": "e7f8a9b0-c1d2-3456-789a-bcdef0123456",
+    "name": {
+      "en": "Requires Registration",
+      "th": "ต้องลงทะเบียน",
+      "ru": "Требуется регистрация"
+    },
+    "description": {
+      "en": "Indicates if attendees need to register",
+      "th": "ระบุว่าผู้เข้าร่วมต้องลงทะเบียนหรือไม่",
+      "ru": "Указывает, нужно ли регистрироваться участникам"
+    },
+    "code": "requires_registration",
+    "is_locked": false,
+    "type": "bool",
+    "meta": null,
+    "display_order": 15,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  }
+]

@@ -1,0 +1,574 @@
+[
+  {
+    "id": "1a2b3c4d-5e6f-7890-abcd-ef1234567890",
+    "name": {
+      "en": "Menu Item Name",
+      "th": "ชื่อรายการเมนู",
+      "ru": "Название пункта меню"
+    },
+    "description": {
+      "en": "The name of the menu item",
+      "th": "ชื่อของรายการในเมนู",
+      "ru": "Название блюда в меню"
+    },
+    "code": "item_name",
+    "is_locked": true,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": false,
+      "max": 100
+    },
+    "display_order": 1,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "2b3c4d5e-6f7a-8901-bcde-f23456789abc",
+    "name": {
+      "en": "Item Description",
+      "th": "คำอธิบายรายการ",
+      "ru": "Описание блюда"
+    },
+    "description": {
+      "en": "Detailed description of the menu item",
+      "th": "คำอธิบายรายละเอียดของรายการในเมนู",
+      "ru": "Подробное описание пункта меню"
+    },
+    "code": "item_description",
+    "is_locked": false,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": true,
+      "max": 500
+    },
+    "display_order": 2,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "3c4d5e6f-7a8b-9012-def3-456789abcdef",
+    "name": {
+      "en": "Price",
+      "th": "ราคา",
+      "ru": "Цена"
+    },
+    "description": {
+      "en": "Price of the menu item in local currency",
+      "th": "ราคาของรายการเมนูในสกุลเงินท้องถิ่น",
+      "ru": "Цена блюда в местной валюте"
+    },
+    "code": "price",
+    "is_locked": true,
+    "type": "number",
+    "meta": {
+      "type": "number",
+      "integer": false,
+      "min": 0,
+      "max": 10000
+    },
+    "display_order": 3,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "4d5e6f7a-8b9c-0123-ef45-6789abcdef01",
+    "name": {
+      "en": "Menu Section",
+      "th": "หมวดหมู่เมนู",
+      "ru": "Раздел меню"
+    },
+    "description": {
+      "en": "The section or category the item belongs to (e.g., Appetizers, Main Course)",
+      "th": "หมวดหมู่ที่รายการนี้อยู่ใน (เช่น อาหารเรียกน้ำย่อย, อาหารจานหลัก)",
+      "ru": "Раздел или категория, к которой относится блюдо (например, закуски, основные блюда)"
+    },
+    "code": "menu_section",
+    "is_locked": true,
+    "type": "option",
+    "meta": {
+      "type": "option",
+      "multi": false,
+      "sorting": "manual"
+    },
+    "options": [
+      {
+        "option_id": "5e6f7a8b-9c0d-1234-f567-89abcdef0123",
+        "property_id": "4d5e6f7a-8b9c-0123-ef45-6789abcdef01",
+        "name": {
+          "en": "Appetizers",
+          "th": "อาหารเรียกน้ำย่อย",
+          "ru": "Закуска"
+        },
+        "display_order": 1,
+        "code": "appetizers",
+        "is_new": false
+      },
+      {
+        "option_id": "6f7a8b9c-0d1e-2345-6789-abcdef012345",
+        "property_id": "4d5e6f7a-8b9c-0123-ef45-6789abcdef01",
+        "name": {
+          "en": "Main Course",
+          "th": "อาหารจานหลัก",
+          "ru": "Основное блюдо"
+        },
+        "display_order": 2,
+        "code": "main_course",
+        "is_new": false
+      },
+      {
+        "option_id": "7a8b9c0d-1e2f-3456-789a-bcdef0123456",
+        "property_id": "4d5e6f7a-8b9c-0123-ef45-6789abcdef01",
+        "name": {
+          "en": "Desserts",
+          "th": "ของหวาน",
+          "ru": "Десерты"
+        },
+        "display_order": 3,
+        "code": "desserts",
+        "is_new": false
+      },
+      {
+        "option_id": "8b9c0d1e-2f3a-4567-89ab-cdef01234567",
+        "property_id": "4d5e6f7a-8b9c-0123-ef45-6789abcdef01",
+        "name": {
+          "en": "Beverages",
+          "th": "เครื่องดื่ม",
+          "ru": "Напитки"
+        },
+        "display_order": 4,
+        "code": "beverages",
+        "is_new": false
+      }
+    ],
+    "display_order": 4,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "9c0d1e2f-3a4b-5678-9abc-def012345678",
+    "name": {
+      "en": "Dietary Options",
+      "th": "ตัวเลือกอาหารพิเศษ",
+      "ru": "Диетические опции"
+    },
+    "description": {
+      "en": "Dietary preferences or restrictions for the item",
+      "th": "ความต้องการหรือข้อจำกัดด้านอาหารสำหรับรายการนี้",
+      "ru": "Диетические предпочтения или ограничения для блюда"
+    },
+    "code": "dietary_options",
+    "is_locked": false,
+    "type": "option",
+    "meta": {
+      "type": "option",
+      "multi": true,
+      "sorting": "alphabet"
+    },
+    "options": [
+      {
+        "option_id": "0d1e2f3a-4b5c-6789-abcd-ef123456789a",
+        "property_id": "9c0d1e2f-3a4b-5678-9abc-def012345678",
+        "name": {
+          "en": "Vegetarian",
+          "th": "มังสวิรัติ",
+          "ru": "Вегетарианский"
+        },
+        "display_order": 1,
+        "code": "vegetarian",
+        "is_new": false
+      },
+      {
+        "option_id": "1e2f3a4b-5c6d-7890-bcde-f23456789abc",
+        "property_id": "9c0d1e2f-3a4b-5678-9abc-def012345678",
+        "name": {
+          "en": "Vegan",
+          "th": "วีแกน",
+          "ru": "Веганский"
+        },
+        "display_order": 2,
+        "code": "vegan",
+        "is_new": false
+      },
+      {
+        "option_id": "2f3a4b5c-6d7e-8901-cdef-3456789abcde",
+        "property_id": "9c0d1e2f-3a4b-5678-9abc-def012345678",
+        "name": {
+          "en": "Gluten-Free",
+          "th": "ปราศจากกลูเตน",
+          "ru": "Безглютеновый"
+        },
+        "display_order": 3,
+        "code": "gluten_free",
+        "is_new": false
+      }
+    ],
+    "display_order": 5,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "3a4b5c6d-7e8f-9012-def3-456789abcdef",
+    "name": {
+      "en": "Spice Level",
+      "th": "ระดับความเผ็ด",
+      "ru": "Уровень остроты"
+    },
+    "description": {
+      "en": "Spice level of the dish",
+      "th": "ระดับความเผ็ดของอาหาร",
+      "ru": "Уровень остроты блюда"
+    },
+    "code": "spice_level",
+    "is_locked": false,
+    "type": "option",
+    "meta": {
+      "type": "option",
+      "multi": false,
+      "sorting": "manual"
+    },
+    "options": [
+      {
+        "option_id": "4b5c6d7e-8f9a-0123-ef45-6789abcdef01",
+        "property_id": "3a4b5c6d-7e8f-9012-def3-456789abcdef",
+        "name": {
+          "en": "Mild",
+          "th": "ไม่เผ็ด",
+          "ru": "Мягкий"
+        },
+        "display_order": 1,
+        "code": "mild",
+        "is_new": false
+      },
+      {
+        "option_id": "5c6d7e8f-9a0b-1234-f567-89abcdef0123",
+        "property_id": "3a4b5c6d-7e8f-9012-def3-456789abcdef",
+        "name": {
+          "en": "Medium",
+          "th": "เผ็ดปานกลาง",
+          "ru": "Средний"
+        },
+        "display_order": 2,
+        "code": "medium",
+        "is_new": false
+      },
+      {
+        "option_id": "6d7e8f9a-0b1c-2345-6789-abcdef012345",
+        "property_id": "3a4b5c6d-7e8f-9012-def3-456789abcdef",
+        "name": {
+          "en": "Hot",
+          "th": "เผ็ดมาก",
+          "ru": "Острый"
+        },
+        "display_order": 3,
+        "code": "hot",
+        "is_new": false
+      }
+    ],
+    "display_order": 6,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "7e8f9a0b-1c2d-3456-789a-bcdef0123456",
+    "name": {
+      "en": "Preparation Time",
+      "th": "เวลาการเตรียม",
+      "ru": "Время приготовления"
+    },
+    "description": {
+      "en": "Estimated preparation time in minutes",
+      "th": "เวลาการเตรียมโดยประมาณเป็นนาที",
+      "ru": "Примерное время приготовления в минутах"
+    },
+    "code": "prep_time",
+    "is_locked": false,
+    "type": "number",
+    "meta": {
+      "type": "number",
+      "integer": true,
+      "min": 0,
+      "max": 120
+    },
+    "display_order": 7,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "8f9a0b1c-2d3e-4567-89ab-cdef01234567",
+    "name": {
+      "en": "Allergens",
+      "th": "สารก่อภูมิแพ้",
+      "ru": "Аллергены"
+    },
+    "description": {
+      "en": "Potential allergens in the dish",
+      "th": "สารก่อภูมิแพ้ที่อาจมีในอาหาร",
+      "ru": "Потенциальные аллергены в блюде"
+    },
+    "code": "allergens",
+    "is_locked": false,
+    "type": "option",
+    "meta": {
+      "type": "option",
+      "multi": true,
+      "sorting": "alphabet"
+    },
+    "options": [
+      {
+        "option_id": "9a0b1c2d-3e4f-5678-9abc-def123456789",
+        "property_id": "8f9a0b1c-2d3e-4567-89ab-cdef01234567",
+        "name": {
+          "en": "Peanuts",
+          "th": "ถั่วลิสง",
+          "ru": "Арахис"
+        },
+        "display_order": 1,
+        "code": "peanuts",
+        "is_new": false
+      },
+      {
+        "option_id": "0b1c2d3e-4f5a-6789-abcd-ef23456789ab",
+        "property_id": "8f9a0b1c-2d3e-4567-89ab-cdef01234567",
+        "name": {
+          "en": "Shellfish",
+          "th": "สัตว์น้ำที่มีเปลือก",
+          "ru": "Моллюски"
+        },
+        "display_order": 2,
+        "code": "shellfish",
+        "is_new": false
+      },
+      {
+        "option_id": "1c2d3e4f-5a6b-7890-bcde-f3456789abcd",
+        "property_id": "8f9a0b1c-2d3e-4567-89ab-cdef01234567",
+        "name": {
+          "en": "Dairy",
+          "th": "ผลิตภัณฑ์นม",
+          "ru": "Молочные продукты"
+        },
+        "display_order": 3,
+        "code": "dairy",
+        "is_new": false
+      }
+    ],
+    "display_order": 8,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "2d3e4f5a-6b7c-8901-cdef-456789abcdef",
+    "name": {
+      "en": "Is Available",
+      "th": "มีจำหน่าย",
+      "ru": "Доступно"
+    },
+    "description": {
+      "en": "Indicates if the item is currently available",
+      "th": "ระบุว่ารายการนี้มีจำหน่ายในขณะนี้หรือไม่",
+      "ru": "Указывает, доступен ли пункт в настоящее время"
+    },
+    "code": "is_available",
+    "is_locked": true,
+    "type": "bool",
+    "meta": null,
+    "display_order": 9,
+    "is_required": true,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "3e4f5a6b-7c8d-9012-def3-56789abcdef0",
+    "name": {
+      "en": "Image URL",
+      "th": "URL รูปภาพ",
+      "ru": "URL изображения"
+    },
+    "description": {
+      "en": "URL to the image of the menu item",
+      "th": "URL ไปยังรูปภาพของรายการเมนู",
+      "ru": "URL изображения блюда"
+    },
+    "code": "image_url",
+    "is_locked": false,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": false,
+      "max": 1000
+    },
+    "display_order": 10,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "4f5a6b7c-8d9e-0123-ef45-6789abcdef01",
+    "name": {
+      "en": "Chef Notes",
+      "th": "บันทึกของเชฟ",
+      "ru": "Заметки шеф-повара"
+    },
+    "description": {
+      "en": "Internal notes from the chef about the dish",
+      "th": "บันทึกภายในจากเชฟเกี่ยวกับอาหาร",
+      "ru": "Внутренние заметки шеф-повара о блюде"
+    },
+    "code": "chef_notes",
+    "is_locked": false,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": true,
+      "max": 1000
+    },
+    "display_order": 11,
+    "is_required": false,
+    "is_private": true,
+    "is_new": false
+  },
+  {
+    "id": "5a6b7c8d-9e0f-1234-f567-89abcdef0123",
+    "name": {
+      "en": "Serving Size",
+      "th": "ขนาดเสิร์ฟ",
+      "ru": "Размер порции"
+    },
+    "description": {
+      "en": "Number of people the dish serves",
+      "th": "จำนวนคนที่อาหารนี้เสิร์ฟได้",
+      "ru": "Количество человек, которых обслуживает блюдо"
+    },
+    "code": "serving_size",
+    "is_locked": false,
+    "type": "number",
+    "meta": {
+      "type": "number",
+      "integer": true,
+      "min": 1,
+      "max": 10
+    },
+    "display_order": 12,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "6b7c8d9e-0f1a-2345-6789-abcdef012345",
+    "name": {
+      "en": "Cuisine Type",
+      "th": "ประเภทอาหาร",
+      "ru": "Тип кухни"
+    },
+    "description": {
+      "en": "Type of cuisine for the dish",
+      "th": "ประเภทอาหารของเมนูนี้",
+      "ru": "Тип кухни для блюда"
+    },
+    "code": "cuisine_type",
+    "is_locked": false,
+    "type": "option",
+    "meta": {
+      "type": "option",
+      "multi": false,
+      "sorting": "alphabet"
+    },
+    "options": [
+      {
+        "option_id": "7c8d9e0f-1a2b-3456-789a-bcdef0123456",
+        "property_id": "6b7c8d9e-0f1a-2345-6789-abcdef012345",
+        "name": {
+          "en": "Italian",
+          "th": "อิตาเลียน",
+          "ru": "Итальянская"
+        },
+        "display_order": 1,
+        "code": "italian",
+        "is_new": false
+      },
+      {
+        "option_id": "8d9e0f1a-2b3c-4567-89ab-cdef01234567",
+        "property_id": "6b7c8d9e-0f1a-2345-6789-abcdef012345",
+        "name": {
+          "en": "Thai",
+          "th": "ไทย",
+          "ru": "Тайская"
+        },
+        "display_order": 2,
+        "code": "thai",
+        "is_new": false
+      },
+      {
+        "option_id": "9e0f1a2b-3c4d-5678-9abc-def123456789",
+        "property_id": "6b7c8d9e-0f1a-2345-6789-abcdef012345",
+        "name": {
+          "en": "Mexican",
+          "th": "เม็กซิกัน",
+          "ru": "Мексиканская"
+        },
+        "display_order": 3,
+        "code": "mexican",
+        "is_new": false
+      }
+    ],
+    "display_order": 13,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "0f1a2b3c-4d5e-6789-abcd-ef23456789ab",
+    "name": {
+      "en": "Seasonal Item",
+      "th": "รายการตามฤดูกาล",
+      "ru": "Сезонный пункт"
+    },
+    "description": {
+      "en": "Indicates if the item is seasonal",
+      "th": "ระบุว่ารายการนี้เป็นรายการตามฤดูกาลหรือไม่",
+      "ru": "Указывает, является ли пункт сезонным"
+    },
+    "code": "seasonal_item",
+    "is_locked": false,
+    "type": "bool",
+    "meta": null,
+    "display_order": 14,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  },
+  {
+    "id": "1a2b3c4d-5e6f-7890-bcde-f3456789abcd",
+    "name": {
+      "en": "Recommended Pairing",
+      "th": "การจับคู่ที่แนะนำ",
+      "ru": "Рекомендуемое сочетание"
+    },
+    "description": {
+      "en": "Suggested beverage or side dish to pair with the item",
+      "th": "เครื่องดื่มหรืออาหารจานข้างที่แนะนำให้จับคู่กับรายการนี้",
+      "ru": "Рекомендуемый напиток или гарнир для сочетания с блюдом"
+    },
+    "code": "recommended_pairing",
+    "is_locked": false,
+    "type": "text",
+    "meta": {
+      "type": "text",
+      "multiline": true,
+      "max": 500
+    },
+    "display_order": 15,
+    "is_required": false,
+    "is_private": false,
+    "is_new": false
+  }
+]

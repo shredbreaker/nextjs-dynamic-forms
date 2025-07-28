@@ -1,0 +1,6 @@
+2. E-commerce Product Catalog
+Products with variants (size, color, SKU, stock)
+
+Promotions, discounts, tags
+
+JSONB for specs or technical details

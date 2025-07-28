@@ -81,21 +81,19 @@ export const DomainLayout = memo(function DomainLayout() {
           </div>
         )}
         <div className="flex flex-1 flex-col space-y-2">
-          {/* {isMobile && ( */}
           <div className="z-30 flex justify-center bg-transparent">
             <CanvasStoreHydrated fallback={<div className="h-8 w-48 animate-pulse rounded bg-gray-200" />}>
-              <div className={cn("flex", isMobile ? "" : "absolute top-5 left-1/2 -translate-x-1/2")}>
+              <div className={cn("flex", isMobile ? "" : "absolute top-3 left-1/2 -translate-x-1/2")}>
                 <CanvasToolbar />
+                {showLanguageBar && (
+                  <div className="absolute top-10 left-1/2 z-20 w-full -translate-x-1/2">
+                    <LanguageSelectionBar />
+                  </div>
+                )}
               </div>
             </CanvasStoreHydrated>
           </div>
-          {/* )} */}
-          {showLanguageBar && (
-            <div className="b sticky top-0 z-20 mt-1 mb-0 w-full flex-none">
-              <LanguageSelectionBar />
-            </div>
-          )}
-          <div className="h-full">
+          <div className={cn("h-full", showLanguageBar && "pt-1")}>
             <CanvasStoreHydrated fallback={<div className="animate-pulse p-8 text-center"></div>}>
               <LayoutStoreHydrated>
                 <CustomLocaleProvider customLocale={customTranslation}>

@@ -1,0 +1,6 @@
+Streaming Service CMS
+Shows, episodes, categories
+
+Video upload with preview
+
+Region-locking or age restriction options
