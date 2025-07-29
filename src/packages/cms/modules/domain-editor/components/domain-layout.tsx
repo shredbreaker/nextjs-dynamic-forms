@@ -99,7 +99,7 @@ export const DomainLayout = memo(function DomainLayout() {
                   <div>
                     <CanvasToolbar />
                     {showLanguageBar && (
-                      <div className="bottom- absolute left-1/2 z-20 w-full -translate-x-1/2">
+                      <div className="absolute bottom-0 left-1/2 z-20 w-full -translate-x-1/2">
                         <LanguageSelectionBar />
                       </div>
                     )}

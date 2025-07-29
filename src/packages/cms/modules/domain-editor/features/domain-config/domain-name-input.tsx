@@ -22,9 +22,9 @@
  */
 "use client";
 
+import { useLocale } from "next-intl";
 import { useCMSTranslations } from "@cms/i18n/use-cms-translation.hooks";
 import { useDomainStore } from "@cms/modules/domain-editor/stores/domain-store";
-import { useLayoutStore } from "@cms/modules/domain-editor/stores/layout-store";
 
 /**
  * 🏗️ Domain Name Input - Display and edit domain name
@@ -34,14 +34,13 @@ import { useLayoutStore } from "@cms/modules/domain-editor/stores/layout-store";
  */
 export default function DomainNameInput(): React.JSX.Element {
   const { t } = useCMSTranslations();
-  const layoutStore = useLayoutStore();
-  const currentTranslation = layoutStore((state) => state.currentTranslation) || "";
+  const locale = useLocale();
 
   const domainStore = useDomainStore();
   const domain = domainStore((state) => state.domain);
 
   // Get domain name in current translation or fallback to code
-  const domainName = domain?.name?.[currentTranslation] || domain?.code || t("domain.unnamed");
+  const domainName = domain?.name?.[locale] || domain?.code || t("domain.unnamed");
 
   return (
     <div className="flex min-w-0 items-center justify-center">
