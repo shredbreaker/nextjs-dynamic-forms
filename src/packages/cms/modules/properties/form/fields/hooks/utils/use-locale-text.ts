@@ -3,7 +3,6 @@
 import { useLocale } from "next-intl";
 import { useMemo, useCallback, useRef } from "react";
 import { LocalizedText } from "@cms-data/modules/localization/localization.types";
-import { useCMSTranslations } from "@cms/i18n/use-cms-translation.hooks";
 import { useCustomLocale } from "@cms/modules/localization/hooks/use-custom-locale";
 import { getAvailableLocalizedText } from "@cms/modules/localization/utils/get-available-localized-text";
 import { useProperty, usePropertyId, usePropertyStore } from "@cms/modules/properties/form/hooks";

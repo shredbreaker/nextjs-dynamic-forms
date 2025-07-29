@@ -7,7 +7,6 @@ import { QuickTooltip } from "@shared-ui/components/ui/quick-tooltip";
 import { Toggle } from "@shared-ui/shadcn/components/ui/toggle";
 import { useAppTranslations } from "@/i18n/app-translation.hooks";
 import { ClientOnly } from "@/packages/shared-ui/components/client-only";
-import { useCMSTranslations } from "@cms/i18n/use-cms-translation.hooks";
 
 export function ThemeSwitcher({ className }: { className?: string }) {
   return (

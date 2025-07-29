@@ -168,7 +168,7 @@ export const PropertyOptionBadgeItemWithConfirmation = memo(function PropertyOpt
         data-testid={`property-option-badge-input-${optionId}`}
       />
     ),
-    [inputRef, defaultValue, onChange, optionId],
+    [inputRef, defaultValue, onChange, optionId, placeholder],
   );
 
   const deleteButton = useMemo(

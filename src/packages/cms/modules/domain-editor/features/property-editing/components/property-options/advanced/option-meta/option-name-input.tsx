@@ -1,6 +1,5 @@
-import { memo, useCallback, useMemo } from "react";
+import { memo, useCallback } from "react";
 import { Input } from "@shared-ui/shadcn/components/ui/input";
-import { useCMSTranslations } from "@cms/i18n/use-cms-translation.hooks";
 import { usePropertyOptionCRUD, usePropertyOptionInput } from "@cms/modules/domain-editor/features/property-editing";
 import { useDebugRender } from "@cms/modules/domain-editor/hooks";
 import { useCanvasStore } from "@cms/modules/domain-editor/stores/canvas-store";
@@ -17,7 +16,6 @@ export const PropertyOptionNameInput = memo(function PropertyOptionNameInput({
 }) {
   useDebugRender("PropertyOptionNameInput");
 
-  const { t } = useCMSTranslations();
   const layoutStore = useLayoutStore();
   const canvasStore = useCanvasStore();
   const { updateOptionName } = usePropertyOptionCRUD(propertyId);

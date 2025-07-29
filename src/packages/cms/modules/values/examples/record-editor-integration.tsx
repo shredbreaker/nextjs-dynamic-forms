@@ -150,7 +150,7 @@ export function RecordEditorExample() {
   };
 
   // Handle save action
-  const handleSave = (values: Record<string, Value>) => {
+  const handleSave = () => {
     // In a real app, you would call an API here
   };
 

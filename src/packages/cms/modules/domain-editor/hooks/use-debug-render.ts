@@ -31,8 +31,6 @@
  */
 "use client";
 
-import { useRef, useEffect } from "react";
-
 /**
  * 🔍 Debug Render Hook - Track component re-renders
  *
