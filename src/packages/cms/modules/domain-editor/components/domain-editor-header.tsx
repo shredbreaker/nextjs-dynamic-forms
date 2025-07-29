@@ -28,15 +28,17 @@
  */
 "use client";
 
+import { ArrowLeft } from "lucide-react";
 import { memo } from "react";
 import { ThemeSwitcher } from "@shared-ui/components/theme/theme-switcher";
 import LocaleSwitcher from "@shared-ui/i18n/locale-switcher";
+import { Button } from "@shared-ui/shadcn/components/ui/button";
+import { Link } from "@/i18n/navigation";
 import { DomainNameInput } from "@cms/modules/domain-editor/features/domain-config";
 import { useDebugRender } from "@cms/modules/domain-editor/hooks";
 import { useLayoutStore } from "@cms/modules/domain-editor/stores";
 import { DomainStoreHydrated } from "@cms/modules/domain-editor/stores/domain-store/domain.store.hooks";
 import { ResetButton } from "./ui";
-
 /**
  * 🎛️ Domain Editor Header - Main header bar with controls
  *
@@ -71,6 +73,11 @@ export const DomainEditorHeader = memo(function DomainEditorHeader() {
         <DomainStoreHydrated fallback={<div className="h-8 w-32 animate-pulse rounded" />}>
           <div className="flex min-w-0 flex-1 flex-row items-center space-x-2">
             <div className="flex min-w-0 flex-1 flex-row items-center space-x-2">
+              <Link href="/" className="flex items-center justify-center">
+                <Button variant="ghost" size="icon" className="hover:bg-background">
+                  <ArrowLeft className="!h-6 !w-6" />
+                </Button>
+              </Link>
               <DomainNameInput />
               <ResetButton />
             </div>
