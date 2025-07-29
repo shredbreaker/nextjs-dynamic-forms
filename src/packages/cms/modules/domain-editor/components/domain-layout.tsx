@@ -114,15 +114,14 @@ export const DomainLayout = memo(function DomainLayout() {
                       <CustomLocaleProvider customLocale={customTranslation}>
                         <div className="">
                           <PropertyCanvas />
+                          <div className={cn("flex w-full items-center justify-center py-2")}>
+                            <AddPropertyButton />
+                          </div>
                         </div>
                       </CustomLocaleProvider>
                     </LayoutStoreHydrated>
                   </CanvasStoreHydrated>
                 </div>
-              </div>
-
-              <div className={cn("flex w-full items-center justify-center py-2")}>
-                <AddPropertyButton />
               </div>
             </div>
           </div>
