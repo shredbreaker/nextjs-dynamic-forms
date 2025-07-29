@@ -3,7 +3,7 @@
     "title": "เลือกหนึ่งในฟอร์มที่สร้างขึ้นสำหรับการสาธิต:",
     "footer": {
       "line1": "ตัวสร้างฟอร์มแบบไดนามิก",
-      "line2": "NextJS 15, Zustand, Zod, Tailwind และ Shadcn."
+      "line2": "NextJS 15, Zustand, Immer, Zod, Tailwind และ Shadcn."
     }
   },
   "Common": {
