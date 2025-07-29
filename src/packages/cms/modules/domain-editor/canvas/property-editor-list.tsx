@@ -82,7 +82,7 @@ export const PropertyEditorCardList = memo(function PropertyEditorCardList() {
             <div
               {...provided.droppableProps}
               ref={provided.innerRef}
-              className={cn("relative z-10 flex flex-col", snapshot.isDraggingOver && "bg-blue-50/50")}
+              className={cn("relative z-10 flex flex-col", snapshot.isDraggingOver && "")}
             >
               {propertyIds.length > 0 &&
                 propertyIds.map((propertyId, index) => (
