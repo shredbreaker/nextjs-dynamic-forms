@@ -1,6 +1,7 @@
 "use client";
 
 import { Globe } from "lucide-react";
+import { useLocale } from "next-intl";
 import { memo } from "react";
 import { ToggleGroup } from "@shared-ui/shadcn/components/ui/toggle-group";
 import { useCMSTranslations } from "@cms/i18n/use-cms-translation.hooks";
@@ -12,6 +13,7 @@ export const CanvasTranslationsToggle = memo(function CanvasTranslationsToggle()
   useDebugRender("CanvasTranslationsToggle");
   const { t } = useCMSTranslations();
   const layoutStore = useLayoutStore();
+  const locale = useLocale();
 
   const showLanguageBar = layoutStore((state) => state.showLanguageBar);
   const currentValue = showLanguageBar ? "language-open" : "language-closed";
@@ -20,7 +22,8 @@ export const CanvasTranslationsToggle = memo(function CanvasTranslationsToggle()
     const newValue = value === "language-open";
     layoutStore.getState().setShowLanguageBar(newValue);
     if (!newValue) {
-      layoutStore.getState().setCurrentTranslation("en");
+      console.log("turning it off");
+      layoutStore.getState().setCurrentTranslation(locale);
     }
   };
 
