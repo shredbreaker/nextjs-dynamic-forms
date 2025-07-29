@@ -15,13 +15,6 @@
 
 @import "../../src/packages/shared-ui/shadcn/cms-shadcn.css";
 
-@theme inline {
-  --font-bitcount: var(--font-bitcount);
-  --font-open-sans: "Open Sans", sans-serif;
-  --font-jost: var(--font-jost);
-  --font-montserrat: var(--font-montserrat);
-}
-
 @keyframes shake {
   0% {
     transform: rotate(-1deg);
