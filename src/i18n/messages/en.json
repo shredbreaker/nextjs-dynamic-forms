@@ -1,5 +1,19 @@
 {
-  "schema_builder": {
-    "pageName": "Schema Builder"
+  "homepage": {
+    "title": "Choose one of the generated forms for demo:",
+    "footer": {
+      "line1": "Dynamic form builder",
+      "line2": "NextJS 15, Zustand, Zod, Tailwind and Shadcn."
+    }
+  },
+  "Common": {
+    "Tooltips": {
+      "SelectLanguage": "Select language",
+      "Theme": {
+        "Light": "Light Mode",
+        "Dark": "Dark Mode",
+        "System": "System Mode"
+      }
+    }
   }
 }

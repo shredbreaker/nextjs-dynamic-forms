@@ -139,7 +139,6 @@
           },
           "max-label": "Max length",
           "single-line": "Single line text field",
-          "multiline": "Multiline text area",
           "multiline": {
             "on": {
               "label": "Multiline text area",
@@ -195,16 +194,7 @@
         "size_description": "Area size (rai, sqm, etc.)"
       }
     },
-    "UI": {
-      "Tooltips": {
-        "SelectLanguage": "Select language",
-        "Theme": {
-          "Light": "Light Mode",
-          "Dark": "Dark Mode",
-          "System": "System Mode"
-        }
-      }
-    },
+
     "property_options": {
       "manage_dialog": {
         "title": "Manage Property Options",

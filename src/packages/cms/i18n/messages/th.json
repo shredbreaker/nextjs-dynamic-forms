@@ -195,16 +195,6 @@
         "size_description": "ขนาด (ตารางกิโลเมตร, ตารางวา, ฯลฯ)"
       }
     },
-    "UI": {
-      "Tooltips": {
-        "SelectLanguage": "เลือกภาษา",
-        "Theme": {
-          "Light": "โหมดกลาง",
-          "Dark": "โหมดมืด",
-          "System": "โหมดระบบ"
-        }
-      }
-    },
     "property_options": {
       "manage_dialog": {
         "title": "จัดการตัวเลือกคุณสมบัติ",

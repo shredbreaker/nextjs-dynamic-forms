@@ -11,8 +11,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@shared-ui/shadcn/components/ui/dropdown-menu";
+import { useAppTranslations } from "@/i18n/app-translation.hooks";
 import { getLanguageName } from "@/i18n/supported-locales";
-import { useCMSTranslations } from "@cms/i18n/use-cms-translation.hooks";
 import { useLocalization } from "./locale.context";
 import { getFlagComponent } from "./localized-flag";
 
@@ -39,7 +39,7 @@ function LocaleSwitcherInner({
 }) {
   const { locales: contextLocales, switchLocale } = useLocalization();
   const currentLocale = useLocale();
-  const { t } = useCMSTranslations();
+  const { t } = useAppTranslations("Common");
 
   if (!currentLocale || !contextLocales || typeof switchLocale !== "function") {
     // Optionally return a loader or null, or rely on ClientOnly and context readiness
@@ -51,7 +51,7 @@ function LocaleSwitcherInner({
   return (
     <div>
       <DropdownMenu>
-        <QuickTooltip content={t("UI.Tooltips.SelectLanguage")}>
+        <QuickTooltip content={t("Tooltips.SelectLanguage")}>
           <div>
             <DropdownMenuTrigger asChild>
               <div>

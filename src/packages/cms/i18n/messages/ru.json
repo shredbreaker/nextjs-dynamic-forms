@@ -195,16 +195,6 @@
         "size_description": "Площадь (рай, кв.м, и т.д.)"
       }
     },
-    "UI": {
-      "Tooltips": {
-        "SelectLanguage": "Выбрать язык",
-        "Theme": {
-          "Light": "Светлый режим",
-          "Dark": "Темный режим",
-          "System": "Системный режим"
-        }
-      }
-    },
     "property_options": {
       "manage_dialog": {
         "title": "Управление опциями свойства",

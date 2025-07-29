@@ -1,5 +1,19 @@
 {
-  "schema_builder": {
-    "pageName": "Настройка формы"
+  "homepage": {
+    "title": "Выберите одну из сгенерированных форм для демонстрации:",
+    "footer": {
+      "line1": "Динамический конструктор форм",
+      "line2": "NextJS 15, Zustand, Zod, Tailwind и Shadcn."
+    }
+  },
+  "Common": {
+    "Tooltips": {
+      "SelectLanguage": "Выбрать язык",
+      "Theme": {
+        "Light": "Светлый режим",
+        "Dark": "Темный режим",
+        "System": "Системный режим"
+      }
+    }
   }
 }

@@ -5,6 +5,7 @@ import { useTheme } from "next-themes";
 import { useCallback } from "react";
 import { QuickTooltip } from "@shared-ui/components/ui/quick-tooltip";
 import { Toggle } from "@shared-ui/shadcn/components/ui/toggle";
+import { useAppTranslations } from "@/i18n/app-translation.hooks";
 import { ClientOnly } from "@/packages/shared-ui/components/client-only";
 import { useCMSTranslations } from "@cms/i18n/use-cms-translation.hooks";
 
@@ -18,7 +19,7 @@ export function ThemeSwitcher({ className }: { className?: string }) {
 
 export function ThemeSwitcherInner({ className }: { className?: string }) {
   const { theme, setTheme } = useTheme();
-  const { t } = useCMSTranslations();
+  const { t } = useAppTranslations("Common");
 
   const cycleTheme = useCallback(() => {
     if (theme === "light") {
@@ -46,13 +47,13 @@ export function ThemeSwitcherInner({ className }: { className?: string }) {
   const getCurrentThemeTooltip = () => {
     switch (theme) {
       case "light":
-        return t("UI.Tooltips.Theme.Light");
+        return t("Tooltips.Theme.Light");
       case "dark":
-        return t("UI.Tooltips.Theme.Dark");
+        return t("Tooltips.Theme.Dark");
       case "system":
-        return t("UI.Tooltips.Theme.System");
+        return t("Tooltips.Theme.System");
       default:
-        return t("UI.Tooltips.Theme.System");
+        return t("Tooltips.Theme.System");
     }
   };
 
