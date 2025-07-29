@@ -18,7 +18,7 @@ const openSans = Open_Sans({
 const jost = Jost({
   variable: "--font-jost",
   subsets: ["latin"],
-  weight: ["300", "400", "700", "900"],
+  weight: ["300", "200", "400", "700", "900"],
 });
 
 const montserrat = Montserrat({

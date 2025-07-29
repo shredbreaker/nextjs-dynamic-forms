@@ -30,6 +30,7 @@
 
 import { memo } from "react";
 import { cn } from "@shared-ui/lib/utils";
+import { Loader } from "@/components/loader";
 import { PropertyCanvas } from "@cms/modules/domain-editor/canvas";
 import { PropertyNavigation } from "@cms/modules/domain-editor/features/property-tree";
 import { CanvasStoreHydrated, useCanvasStore } from "@cms/modules/domain-editor/stores/canvas-store/canvas.store.hooks";
@@ -62,63 +63,71 @@ export const DomainLayout = memo(function DomainLayout() {
 
   return (
     <div key={resetKey} className="flex h-dvh flex-col">
-      <div className="sticky top-0">
-        <LayoutStoreHydrated>
-          <DomainEditorHeader />
-        </LayoutStoreHydrated>
-      </div>
-
-      <div className="bg-muted flex justify-center overflow-hidden sm:px-12">
-        {showPropertiesTree && (
-          <div className="flex-none">
-            <div className="scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent hover:scrollbar-thumb-gray-400 dark:scrollbar-thumb-gray-600 dark:hover:scrollbar-thumb-gray-500 mx-3 my-3 h-[calc(100%-1.5rem)] overflow-y-auto">
-              <CanvasStoreHydrated fallback={<div className="animate-pulse p-4"></div>}>
-                <LayoutStoreHydrated>
-                  <PropertyNavigation />
-                </LayoutStoreHydrated>
-              </CanvasStoreHydrated>
-            </div>
+      <CanvasStoreHydrated
+        fallback={
+          <div className="animate-pulse p-4">
+            <Loader />
           </div>
-        )}
+        }
+      >
+        <div className="sticky top-0">
+          <LayoutStoreHydrated>
+            <DomainEditorHeader />
+          </LayoutStoreHydrated>
+        </div>
 
-        <div className="flex flex-col space-y-2">
-          <div className={cn("flex h-full flex-col")}>
-            <div
-              className={cn("relative z-30 flex justify-center bg-transparent pt-2 pb-4", showLanguageBar && "pb-10")}
-            >
-              <CanvasStoreHydrated fallback={<div className="h-8 w-48 animate-pulse" />}>
-                {/* <div className={cn("flex", isMobile ? "" : "absolute top-3 left-1/2 -translate-x-1/2")}> */}
-                <div>
-                  <CanvasToolbar />
-                  {showLanguageBar && (
-                    <div className="bottom- absolute left-1/2 z-20 w-full -translate-x-1/2">
-                      <LanguageSelectionBar />
-                    </div>
-                  )}
-                </div>
-              </CanvasStoreHydrated>
-            </div>
-
-            <div className="flex-1 overflow-y-auto">
-              <div className="m-0 px-12">
-                <CanvasStoreHydrated fallback={<div className="animate-pulse p-8 text-center"></div>}>
+        <div className="bg-muted flex justify-center overflow-hidden sm:px-12">
+          {showPropertiesTree && (
+            <div className="flex-none">
+              <div className="scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent hover:scrollbar-thumb-gray-400 dark:scrollbar-thumb-gray-600 dark:hover:scrollbar-thumb-gray-500 mx-3 my-3 h-[calc(100%-1.5rem)] overflow-y-auto">
+                <CanvasStoreHydrated fallback={<div className="animate-pulse p-4"></div>}>
                   <LayoutStoreHydrated>
-                    <CustomLocaleProvider customLocale={customTranslation}>
-                      <div className="">
-                        <PropertyCanvas />
-                      </div>
-                    </CustomLocaleProvider>
+                    <PropertyNavigation />
                   </LayoutStoreHydrated>
                 </CanvasStoreHydrated>
               </div>
             </div>
+          )}
 
-            <div className={cn("flex w-full items-center justify-center py-2")}>
-              <AddPropertyButton />
+          <div className="flex flex-col space-y-2">
+            <div className={cn("flex h-full flex-col")}>
+              <div
+                className={cn("relative z-30 flex justify-center bg-transparent pt-2 pb-4", showLanguageBar && "pb-10")}
+              >
+                <CanvasStoreHydrated fallback={<div className="h-8 w-48 animate-pulse" />}>
+                  {/* <div className={cn("flex", isMobile ? "" : "absolute top-3 left-1/2 -translate-x-1/2")}> */}
+                  <div>
+                    <CanvasToolbar />
+                    {showLanguageBar && (
+                      <div className="bottom- absolute left-1/2 z-20 w-full -translate-x-1/2">
+                        <LanguageSelectionBar />
+                      </div>
+                    )}
+                  </div>
+                </CanvasStoreHydrated>
+              </div>
+
+              <div className="flex-1 overflow-y-auto">
+                <div className="m-0 px-12">
+                  <CanvasStoreHydrated fallback={<div className="animate-pulse p-8 text-center"></div>}>
+                    <LayoutStoreHydrated>
+                      <CustomLocaleProvider customLocale={customTranslation}>
+                        <div className="">
+                          <PropertyCanvas />
+                        </div>
+                      </CustomLocaleProvider>
+                    </LayoutStoreHydrated>
+                  </CanvasStoreHydrated>
+                </div>
+              </div>
+
+              <div className={cn("flex w-full items-center justify-center py-2")}>
+                <AddPropertyButton />
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </CanvasStoreHydrated>
     </div>
   );
 });
