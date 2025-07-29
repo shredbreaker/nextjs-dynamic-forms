@@ -80,13 +80,13 @@ export const PropertyTypeSelector = memo(function PropertyTypeSelector() {
         <Button
           variant="text"
           size="sm"
-          className={cn("has-[>svg]:pl-1", currentConfig?.borderColor, currentConfig?.textColor)}
+          className={cn("relative has-[>svg]:pl-1", currentConfig?.borderColor, currentConfig?.textColor)}
           aria-haspopup="listbox"
         >
           <div className={cn("flex h-7 w-7 items-center justify-center rounded", currentConfig?.color)}>
             <CurrentIcon className="h-4 w-4 text-white" />
           </div>
-          <ChevronDown className="h-4 w-4 transition-transform duration-200" />
+          <ChevronDown className="absolute top-1/2 -right-2.5 h-4 w-4 -translate-y-1/2 transition-transform duration-200" />
         </Button>
       </DropdownMenuTrigger>
 

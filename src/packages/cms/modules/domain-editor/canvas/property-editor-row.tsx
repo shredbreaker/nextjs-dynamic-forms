@@ -23,7 +23,7 @@ export const PropertyEditorCardRow = memo(() => {
       )}
     >
       <div className="flex items-center justify-center">
-        <div className={cn("w-full px-8 sm:max-w-md sm:px-0")}>
+        <div className={cn("w-full px-0 sm:max-w-md")}>
           <PropertyEditorCard />
         </div>
       </div>

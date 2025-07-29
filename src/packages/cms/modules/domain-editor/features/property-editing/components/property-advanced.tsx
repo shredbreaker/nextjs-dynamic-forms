@@ -75,7 +75,7 @@ export const PropertyAdvanced = memo(function PropertyAdvanced() {
 
   return (
     <div className="flex w-full flex-col items-start justify-center space-y-2 rounded-none border-t-1 px-2 pt-1 pb-1">
-      <div className={cn("flex w-full rounded-none", showDescriptionBottomBorder && "border-b-1")}>
+      <div className={cn("flex w-full rounded-none px-2", showDescriptionBottomBorder && "border-b-1")}>
         <PropertyDescriptionFloatingInput />
       </div>
       {content}
