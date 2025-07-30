@@ -8,18 +8,6 @@ A production-ready dynamic form builder built with Next.js 15, Zustand, Immer, a
 
 The system follows a hierarchical data model:
 
-```mermaid
-graph TD
-    A[Domain] --> B[Properties]
-    B --> C[Records]
-    C --> D[Values]
-
-    A1[Domain: Collection Schema] --> A2[Example: E-commerce Products]
-    B1[Property: Field Definition] --> B2[Example: Product Name, Price, Category]
-    C1[Record: Document Instance] --> C2[Example: iPhone 15, MacBook Pro]
-    D1[Value: Field Data] --> D2[Example: "iPhone 15", 999.99, "Electronics"]
-```
-
 - **Domain**: Represents a collection schema (e.g., "Products", "Users", "Events")
 - **Property**: Defines field schemas with types, constraints, and metadata
 - **Record**: Individual documents within a domain
