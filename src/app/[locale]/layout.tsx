@@ -1,4 +1,5 @@
 import "@/app/globals.css";
+import { Analytics } from "@vercel/analytics/next";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
 import type { Metadata, Viewport } from "next";
@@ -88,6 +89,7 @@ export default async function LocaleLayout({
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <LocalizationProviderWrapper>
               <main className="flex-grow">{children}</main>
+              <Analytics />
             </LocalizationProviderWrapper>
           </ThemeProvider>
         </NextIntlClientProvider>
