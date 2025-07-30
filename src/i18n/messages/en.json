@@ -1,6 +1,6 @@
 {
   "homepage": {
-    "title": "Choose one of the generated forms for demo:",
+    "title": "Generated test forms",
     "footer": {
       "line1": "Dynamic form builder",
       "line2": "NextJS 15, Zustand, Immer, Zod, Tailwind and Shadcn."

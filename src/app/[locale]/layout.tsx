@@ -83,10 +83,12 @@ export default async function LocaleLayout({
       lang={locale}
       suppressHydrationWarning
     >
-      <body>
+      <body className="flex min-h-screen flex-col">
         <NextIntlClientProvider>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <LocalizationProviderWrapper>{children}</LocalizationProviderWrapper>
+            <LocalizationProviderWrapper>
+              <main className="flex-grow">{children}</main>
+            </LocalizationProviderWrapper>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

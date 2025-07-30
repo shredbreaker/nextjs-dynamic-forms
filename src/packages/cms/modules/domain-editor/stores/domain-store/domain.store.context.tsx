@@ -11,10 +11,7 @@ export interface DomainStoreProviderProps {
   children: React.ReactNode;
 }
 
-export function DomainStoreProvider({
-  initialDomain,
-  children,
-}: DomainStoreProviderProps): React.JSX.Element {
+export function DomainStoreProvider({ initialDomain, children }: DomainStoreProviderProps): React.JSX.Element {
   const storeRef = useRef<DomainStoreType | null>(null);
 
   if (!storeRef.current) {
@@ -23,4 +20,3 @@ export function DomainStoreProvider({
 
   return <DomainStoreContext.Provider value={storeRef.current}>{children}</DomainStoreContext.Provider>;
 }
-

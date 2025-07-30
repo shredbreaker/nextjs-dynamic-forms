@@ -12,13 +12,11 @@ import {
 } from "lucide-react";
 import { useLocale } from "next-intl";
 import { useCallback } from "react";
-import { ThemeSwitcher } from "@shared-ui/components/theme/theme-switcher";
-import LocaleSwitcher from "@shared-ui/i18n/locale-switcher";
 import { MOCK_DOMAIN_NAMES } from "@/app/mocks/mock-name";
-import { Logo } from "@/components/logo";
+import Footer from "@/components/footer";
+import Header from "@/components/header";
 import { useAppTranslations } from "@/i18n/app-translation.hooks";
 import { Link } from "@/i18n/navigation";
-
 export default function HomePage() {
   const domainIds = Object.keys(MOCK_DOMAIN_NAMES);
   const locale = useLocale();
@@ -52,21 +50,13 @@ export default function HomePage() {
   }));
 
   return (
-    <div className="bg-muted relative flex h-dvh w-full flex-col items-center justify-start space-y-6 overflow-auto p-8">
+    <div className="bg-muted relative flex h-dvh w-full flex-col items-center justify-start space-y-6 overflow-auto">
       {/* Header with Logo and Switchers */}
-      <div className="rounded-2xl p-4">
-        <Logo />
+      <div className="w-full">
+        <Header />
       </div>
-
-      <div className="absolute top-2 right-4 flex items-center justify-between">
-        <div className="flex shrink-0 flex-row justify-end space-x-2">
-          <LocaleSwitcher onSwitch={() => {}} />
-          <ThemeSwitcher />
-        </div>
-      </div>
-
-      <div className="flex flex-col items-center justify-center space-y-0">
-        <span className="font-jost text-light text-md px-20 py-2 text-center">{t("title")}</span>
+      <div className="flex flex-col items-center justify-center space-y-4">
+        <span className="text-muted-foreground px-20 py-2 text-center text-2xl font-semibold">{t("title")}</span>
         <nav className="flex">
           <ul className="bg-card flex flex-col space-y-2 rounded-xl p-8 py-2 shadow-xl">
             {links.map((link) => (
@@ -80,12 +70,7 @@ export default function HomePage() {
           </ul>
         </nav>
       </div>
-      <div className="text-muted-foreground font-jost flex text-sm">
-        <span className="px-20 text-center">
-          {t("footer.line1")}
-          <br /> {t("footer.line2")}
-        </span>
-      </div>
+      <Footer />
     </div>
   );
 }

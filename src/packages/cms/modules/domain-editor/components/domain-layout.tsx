@@ -30,6 +30,7 @@
 
 import { memo } from "react";
 import { cn } from "@shared-ui/lib/utils";
+import Footer from "@/components/footer";
 import { Loader } from "@/components/loader";
 import { PropertyCanvas } from "@cms/modules/domain-editor/canvas";
 import { PropertyNavigation } from "@cms/modules/domain-editor/features/property-tree";
@@ -106,7 +107,6 @@ export const DomainLayout = memo(function DomainLayout() {
                   </div>
                 </CanvasStoreHydrated>
               </div>
-
               <div className="flex-1 overflow-y-auto">
                 <div className="m-0 px-12">
                   <CanvasStoreHydrated fallback={<div className="animate-pulse p-8 text-center"></div>}>
@@ -122,6 +122,7 @@ export const DomainLayout = memo(function DomainLayout() {
                     </LayoutStoreHydrated>
                   </CanvasStoreHydrated>
                 </div>
+                <Footer />
               </div>
             </div>
           </div>

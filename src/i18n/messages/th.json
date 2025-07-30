@@ -1,6 +1,6 @@
 {
   "homepage": {
-    "title": "เลือกหนึ่งในฟอร์มที่สร้างขึ้นสำหรับการสาธิต:",
+    "title": "ฟอร์มทดสอบที่สร้างขึ้น",
     "footer": {
       "line1": "ตัวสร้างฟอร์มแบบไดนามิก",
       "line2": "NextJS 15, Zustand, Immer, Zod, Tailwind และ Shadcn."

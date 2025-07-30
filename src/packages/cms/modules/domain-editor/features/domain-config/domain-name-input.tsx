@@ -23,8 +23,8 @@
 "use client";
 
 import { useLocale } from "next-intl";
-import { useCMSTranslations } from "@cms/i18n/use-cms-translation.hooks";
 import { useDomainStore } from "@cms/modules/domain-editor/stores/domain-store";
+import { getAvailableLocalizedText } from "@cms/modules/localization/utils/get-available-localized-text";
 
 /**
  * 🏗️ Domain Name Input - Display and edit domain name
@@ -33,20 +33,22 @@ import { useDomainStore } from "@cms/modules/domain-editor/stores/domain-store";
  * Includes a back button for navigation to the domain list page.
  */
 export default function DomainNameInput(): React.JSX.Element {
-  const { t } = useCMSTranslations();
   const locale = useLocale();
 
   const domainStore = useDomainStore();
   const domain = domainStore((state) => state.domain);
 
   // Get domain name in current translation or fallback to code
-  const domainName = domain?.name?.[locale] || domain?.code || t("domain.unnamed");
-
+  const domainName = getAvailableLocalizedText(domain?.name, locale);
+  console.log("domainName", domainName);
   return (
-    <div className="flex min-w-0 items-center justify-center">
-      <div className="flex min-w-0 items-center justify-center overflow-hidden">
+    <div className="">
+      <p className="text-muted-foreground shrink-1 font-sans text-[clamp(10pt,10vw,8pt)] font-bold whitespace-nowrap">
+        {domainName}
+      </p>
+      {/* <div className="flex min-w-0 items-center justify-center overflow-hidden">
         <p className="text-muted-foreground truncate font-sans text-lg font-bold sm:text-2xl">{domainName}</p>
-      </div>
+      </div> */}
     </div>
   );
 }
