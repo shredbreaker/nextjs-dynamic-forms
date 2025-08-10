@@ -1,6 +1,16 @@
 {
   "homepage": {
-    "title": "Pre-built Form Templates"
+    "title": "Pre-built Form Templates",
+    "explore": {
+      "heading": "What you can explore:",
+      "items": {
+        "realtime": "Real-time state subscription performance across multiple components",
+        "liveUpdates": "Live updates and previews as you interact with shared data fields",
+        "multiLang": "Multi-language translation support",
+        "dragDrop": "Drag and drop functionality",
+        "poweredBy": "All powered by Zustand + Immer for smooth performance with minimal code"
+      }
+    }
   },
   "Common": {
     "Tooltips": {

@@ -72,14 +72,14 @@ export default function HomePage() {
           </nav>
           <div className="flex flex-col space-y-2 rounded-xl p-8 py-2">
             <span className="text-muted-foreground px-20 py-2 text-center text-2xl font-semibold">
-              What you can explore:
+              {t("explore.heading")}
             </span>
             <ul className="list-disc">
-              <li>Real-time state subscription performance across multiple components</li>
-              <li>Live updates and previews as you interact with shared data fields</li>
-              <li>Multi-language translation support</li>
-              <li>Drag and drop functionality</li>
-              <li>All powered by Zustand + Immer for smooth performance with minimal code</li>
+              <li>{t("explore.items.realtime")}</li>
+              <li>{t("explore.items.liveUpdates")}</li>
+              <li>{t("explore.items.multiLang")}</li>
+              <li>{t("explore.items.dragDrop")}</li>
+              <li>{t("explore.items.poweredBy")}</li>
             </ul>
           </div>
         </div>
