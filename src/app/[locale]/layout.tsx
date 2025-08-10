@@ -34,12 +34,17 @@ const bitcountGridDouble = Bitcount_Grid_Double({
   weight: ["400", "500", "600", "900"],
 });
 
+const MetaTitle = "Dynamic Forms Demo by shredbx";
+const MetaDescription = "NextJS | TypeScript | Zustand | Immer | Intl | TailwindCSS | Shadcn UI | Vercel";
+
 export const metadata: Metadata = {
-  title: "Dynamic Forms Demo",
-  description: "Dynamic Forms by Shredbreaker",
+  title: MetaTitle,
+  description: MetaDescription,
+  // Ensures relative metadata URLs resolve to the production domain
+  metadataBase: new URL("https://ex-nextjs-zustand-dynamic-forms-demo.vercel.app"),
   openGraph: {
-    title: "Dynamic Forms Demo",
-    description: "Dynamic Forms by Shredbreaker",
+    title: MetaTitle,
+    description: MetaDescription,
     type: "website",
     images: [
       {
@@ -52,8 +57,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dynamic Forms Demo",
-    description: "Dynamic Forms by Shredbreaker",
+    title: MetaTitle,
+    description: MetaDescription,
     images: ["/og-image.png"],
   },
 };
