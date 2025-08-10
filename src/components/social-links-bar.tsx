@@ -18,7 +18,7 @@ export const SocialLinksBar = memo(function SocialLinksBar() {
         </Button>
       </Link>
 
-      <Link href="https://github.com/shredbreaker" target="_blank" rel="noopener noreferrer" className="group">
+      <Link href="https://github.com/shredbx" target="_blank" rel="noopener noreferrer" className="group">
         <Button variant="ghost" size="sm">
           <IconBrandGithub className="h-4 w-4 transition-transform duration-200 group-hover:scale-110" />
           GitHub
