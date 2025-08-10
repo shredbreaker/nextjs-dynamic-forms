@@ -79,6 +79,7 @@ export default function HomePage() {
               <li>{t("explore.items.liveUpdates")}</li>
               <li>{t("explore.items.multiLang")}</li>
               <li>{t("explore.items.dragDrop")}</li>
+              <li>{t("explore.items.cmsDynamic")}</li>
               <li>{t("explore.items.poweredBy")}</li>
             </ul>
           </div>
