@@ -57,18 +57,32 @@ export default function HomePage() {
       </div>
       <div className="flex flex-col items-center justify-center space-y-4">
         <span className="text-muted-foreground px-20 py-2 text-center text-2xl font-semibold">{t("title")}</span>
-        <nav className="flex">
-          <ul className="bg-card flex flex-col space-y-2 rounded-xl p-8 py-2 shadow-xl">
-            {links.map((link) => (
-              <li key={link.href} className="px-4 py-1 transition-all duration-200 hover:scale-105">
-                <Link className="flex flex-row items-center justify-between space-x-4" href={link.href}>
-                  {link.icon}
-                  <div className="w-full text-left">{link.label}</div>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <div className="flex w-full flex-col items-center justify-center space-y-8 px-4">
+          <nav className="flex">
+            <ul className="bg-card flex flex-col space-y-2 rounded-xl p-8 py-2 shadow-xl">
+              {links.map((link) => (
+                <li key={link.href} className="px-4 py-1 transition-all duration-200 hover:scale-105">
+                  <Link className="flex flex-row items-center justify-between space-x-4" href={link.href}>
+                    {link.icon}
+                    <div className="w-full text-left">{link.label}</div>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <div className="flex flex-col space-y-2 rounded-xl p-8 py-2">
+            <span className="text-muted-foreground px-20 py-2 text-center text-2xl font-semibold">
+              What you can explore:
+            </span>
+            <ul className="list-disc">
+              <li>Real-time state subscription performance across multiple components</li>
+              <li>Live updates and previews as you interact with shared data fields</li>
+              <li>Multi-language translation support</li>
+              <li>Drag and drop functionality</li>
+              <li>All powered by Zustand + Immer for smooth performance with minimal code</li>
+            </ul>
+          </div>
+        </div>
       </div>
       <Footer />
     </div>

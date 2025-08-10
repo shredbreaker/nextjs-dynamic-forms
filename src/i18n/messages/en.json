@@ -1,10 +1,6 @@
 {
   "homepage": {
-    "title": "Generated test forms",
-    "footer": {
-      "line1": "Dynamic form builder",
-      "line2": "NextJS 15, Zustand, Immer, Zod, Tailwind and Shadcn."
-    }
+    "title": "Pre-built Form Templates"
   },
   "Common": {
     "Tooltips": {

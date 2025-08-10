@@ -7,6 +7,7 @@ import { Bitcount_Grid_Double, Open_Sans, Jost, Montserrat } from "next/font/goo
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { ThemeProvider } from "next-themes";
+import { MetaTitle, MetaDescription } from "@/app/meta";
 import { LocalizationProviderWrapper } from "@/components/providers/localization-provider-wrapper";
 import { routing } from "@/i18n/routing";
 
@@ -33,9 +34,6 @@ const bitcountGridDouble = Bitcount_Grid_Double({
   subsets: ["latin"],
   weight: ["400", "500", "600", "900"],
 });
-
-const MetaTitle = "Dynamic Forms Demo by shredbx";
-const MetaDescription = "NextJS | TypeScript | Zustand | Immer | Intl | TailwindCSS | Shadcn UI | Vercel";
 
 export const metadata: Metadata = {
   title: MetaTitle,

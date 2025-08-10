@@ -1,10 +1,6 @@
 {
   "homepage": {
-    "title": "ฟอร์มทดสอบที่สร้างขึ้น",
-    "footer": {
-      "line1": "ตัวสร้างฟอร์มแบบไดนามิก",
-      "line2": "NextJS 15, Zustand, Immer, Zod, Tailwind และ Shadcn."
-    }
+    "title": "ฟอร์มทดสอบที่สร้างขึ้น"
   },
   "Common": {
     "Tooltips": {

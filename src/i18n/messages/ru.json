@@ -1,10 +1,6 @@
 {
   "homepage": {
-    "title": "Сгенерированные тестовые формы",
-    "footer": {
-      "line1": "Динамический конструктор форм",
-      "line2": "NextJS 15, Zustand, Immer, Zod, Tailwind и Shadcn."
-    }
+    "title": "Шаблоны форм для демонстрации"
   },
   "Common": {
     "Tooltips": {
